@@ -1,5 +1,5 @@
 import { Toast } from "@/hooks/use-toast";
-import { WordNode } from "./types";
+import { Categories, WordNode } from "./types";
 
 export function canMerge(
   node1: WordNode,
@@ -7,13 +7,17 @@ export function canMerge(
   showToast: (toast: Toast) => void
 ): boolean {
   // Example rules
-  if (node1.category === "preposition" && node2.category === "noun") {
+  if (
+    node1.category === Categories.PARTICLE &&
+    node2.category === Categories.NOUN
+  )
     return true; // Preposition + Noun
-  }
 
-  if (node1.category === "article" && node2.category === "noun") {
-    return true; // Article + Noun
-  }
+  if (node1.category === Categories.NOUN && node2.category === Categories.VERB)
+    return true; // Noun + Verb
+
+  if (node1.category === Categories.NOUN && node2.category === Categories.NOUN)
+    return true; // Noun + Noun
 
   // Add more grammar rules as needed
   showToast({

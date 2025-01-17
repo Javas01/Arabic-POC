@@ -1,4 +1,4 @@
-import { WordNode } from "./types";
+import { Categories, Category, WordNode } from "./types";
 
 export function mergeWords(
   draggedWord: WordNode,
@@ -15,13 +15,15 @@ export function mergeWords(
     ...(droppedWord.parts.length > 0 ? [...droppedWord.parts] : [droppedWord])
   ];
 
+  const newWord = getNewWord(draggedWord, droppedWord);
+
   return [
     ..._words,
     {
-      base: draggedWord.base + droppedWord.base + "ِ",
+      base: newWord,
       english: "", // TODO: Add a way to add the english word
-      color: "blue",
-      category: "noun", // TODO: Add a way to add the category
+      color: Category.NOUN.color, // TODO: Add a way to add the color
+      category: Categories.NOUN, // TODO: Add a way to add the category
       hide: false,
       parts: _parts,
       position: {
@@ -30,4 +32,27 @@ export function mergeWords(
       }
     }
   ];
+}
+
+function getNewWord(draggedWord: WordNode, droppedWord: WordNode) {
+  // Noun + Noun (Posessive)
+  // if (
+  //   draggedWord.category === Categories.NOUN &&
+  //   droppedWord.category === Categories.NOUN
+  // )
+  //   return draggedWord.base + "ُ ال" + droppedWord.base + "ِ";
+  // Noun + Noun (Sentence)
+  // if (
+  //   draggedWord.category === Categories.NOUN &&
+  //   droppedWord.category === Categories.NOUN
+  // )
+  //   return "ال" + draggedWord.base + "ُ " + droppedWord.base + "ٌ";
+  // Noun + Noun (Adjective)
+  if (
+    draggedWord.category === Categories.NOUN &&
+    droppedWord.category === Categories.NOUN
+  )
+    return "ال" + draggedWord.base + "ُ " + "ال" + droppedWord.base + "ُ ";
+
+  return draggedWord.base + droppedWord.base + "ِ";
 }

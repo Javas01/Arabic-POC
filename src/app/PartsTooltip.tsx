@@ -29,11 +29,12 @@ export const PartsTooltip = ({
         <TooltipTrigger>{base}</TooltipTrigger>
       </WordBlock>
       <TooltipContent side="top" align="center" sideOffset={30}>
-        <div className="flex flex-row-reverse text-2xl justify-between w-20">
+        <div className="flex flex-row-reverse text-2xl justify-between min-w-20">
           {parts.map((part, i) => (
             <span
               style={{
-                color: part.color
+                color: part.color,
+                margin: "0 0.25rem"
               }}
               key={i}
             >

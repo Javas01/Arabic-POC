@@ -11,11 +11,18 @@ import { WORDS_DATA } from "./fakeData";
 import { mergeWords } from "./mergeWords";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { PartsTooltip } from "./PartsTooltip";
+import {
+  Popover,
+  PopoverContent,
+  PopoverTrigger
+} from "@/components/ui/popover";
+
 const WordBlock = dynamic(() => import("./WordBlock"), { ssr: false });
 
 export default function Home() {
   const { toast } = useToast();
   const [words, setWords] = useState<WordNode[]>(WORDS_DATA);
+  const [showPopover, setShowPopover] = useState(true);
 
   function handleDragEnd(event: DragEndEvent) {
     const { over } = event;

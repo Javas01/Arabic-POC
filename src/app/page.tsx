@@ -28,7 +28,7 @@ export default function Home() {
   const [popover, setPopover] = useState<Popover | null>(null);
 
   function handleDragEnd(event: DragEndEvent) {
-    const { over, active } = event;
+    const { over, active, delta } = event;
     const draggedWord = active.data.current as WordNode;
     const droppedWord = over?.data.current as WordNode;
 
@@ -48,17 +48,15 @@ export default function Home() {
             }
           });
           setCanvasWords((oldWords) =>
-            oldWords.map((word) =>
-              word.id === draggedWord.id
-                ? {
-                    ...word,
-                    position: {
-                      x: droppedWord.position.x + 100,
-                      y: droppedWord.position.y
-                    }
-                  }
-                : word
-            )
+            oldWords
+              .filter((word) => word.id !== draggedWord.id)
+              .concat({
+                ...draggedWord,
+                position: {
+                  x: droppedWord.position.x + 100,
+                  y: droppedWord.position.y
+                }
+              })
           );
           return;
         }
@@ -69,8 +67,8 @@ export default function Home() {
           {
             ...draggedWord,
             position: {
-              x: draggedWord.position.x + event.delta.x,
-              y: draggedWord.position.y + event.delta.y
+              x: droppedWord.position.x,
+              y: droppedWord.position.y
             }
           },
           droppedWord,
@@ -85,8 +83,8 @@ export default function Home() {
               ? {
                   ...word,
                   position: {
-                    x: draggedWord.position.x + event.delta.x,
-                    y: draggedWord.position.y + event.delta.y
+                    x: draggedWord.position.x + delta.x,
+                    y: draggedWord.position.y + delta.y
                   }
                 }
               : word
@@ -101,8 +99,8 @@ export default function Home() {
           ...draggedWord,
           id: draggedWord.base + Date.now(),
           position: {
-            x: draggedWord.position.x + event.delta.x,
-            y: draggedWord.position.y + event.delta.y
+            x: draggedWord.position.x + delta.x,
+            y: draggedWord.position.y + delta.y
           },
           isOnCanvas: true
         }

@@ -3,19 +3,16 @@
 import { Toaster } from "@/components/ui/toaster";
 import { useToast } from "@/hooks/use-toast";
 import { DndContext, DragEndEvent } from "@dnd-kit/core";
-import dynamic from "next/dynamic";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Categories, WordNode } from "./types";
 import { canMerge } from "./canMerge";
-import { WORDS_DATA } from "./fakeData";
 import { mergeWords } from "./mergeWords";
 import { TooltipProvider } from "@/components/ui/tooltip";
-import { PartsTooltip } from "./PartsTooltip";
-import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import WordCategoryTab from "./WordCategoryTab";
 import Popover from "./Popover";
-
-const WordBlock = dynamic(() => import("./WordBlock"), { ssr: false });
+import WordTabs from "./WordTabs";
+import Canvas from "./Canvas";
+import PartsTooltip from "./PartsTooltip";
+import WordBlock from "./WordBlock";
 
 type Popover = {
   words: WordNode[];
@@ -27,55 +24,24 @@ export default function Home() {
   const [canvasWords, setCanvasWords] = useState<WordNode[]>([]);
   const [popover, setPopover] = useState<Popover | null>(null);
 
+  useEffect(() => {
+    console.log("canvasWords", canvasWords);
+  }, [canvasWords]);
+
   function handleDragEnd(event: DragEndEvent) {
     const { over, active, delta } = event;
     const draggedWord = active.data.current as WordNode;
     const droppedWord = over?.data.current as WordNode;
 
-    if (draggedWord.isOnCanvas || droppedWord?.isOnCanvas) {
-      if (over) {
-        if (over.id === active.id) return;
-        // Attempt to merge the dragged word with the word it was dropped on
-        if (
-          draggedWord.category === Categories.NOUN &&
-          droppedWord.category === Categories.NOUN
-        ) {
-          setPopover({
-            words: [droppedWord, draggedWord],
-            position: {
-              x: droppedWord.position.x + 200,
-              y: droppedWord.position.y - 50
-            }
-          });
-          setCanvasWords((oldWords) =>
-            oldWords
-              .filter((word) => word.id !== draggedWord.id)
-              .concat({
-                ...draggedWord,
-                position: {
-                  x: droppedWord.position.x + 100,
-                  y: droppedWord.position.y
-                }
-              })
-          );
-          return;
-        }
-
-        if (!canMerge(draggedWord, droppedWord, toast)) return;
-
-        const newWords = mergeWords(
-          {
-            ...draggedWord,
-            position: {
-              x: droppedWord.position.x,
-              y: droppedWord.position.y
-            }
-          },
-          droppedWord,
-          canvasWords
-        );
-        setCanvasWords(newWords);
-      } else {
+    if (over && (over.id as string).split("-")[0] === "wordtab") {
+      // Remove the dragged word from the canvas
+      setCanvasWords((oldWords) =>
+        oldWords.filter((word) => word.id !== draggedWord.id)
+      );
+      return;
+    }
+    if (over?.id === "canvas") {
+      if (draggedWord.isOnCanvas) {
         // Move the dragged word to the new position
         setCanvasWords((oldWords) =>
           oldWords.map((word) =>
@@ -90,21 +56,65 @@ export default function Home() {
               : word
           )
         );
+      } else {
+        // Add the dragged word to the canvas
+        setCanvasWords((oldWords) =>
+          oldWords.concat({
+            ...draggedWord,
+            position: {
+              x: draggedWord.position.x + delta.x,
+              y: draggedWord.position.y + delta.y
+            },
+            id: draggedWord.base + Date.now(),
+            isOnCanvas: true
+          })
+        );
       }
-    } else {
-      // Move the dragged word to the new position
-      setCanvasWords((x) => [
-        ...x,
+      return;
+    }
+
+    if (droppedWord?.isOnCanvas) {
+      if (droppedWord.id === draggedWord.id) return;
+      // Attempt to merge the dragged word with the word it was dropped on
+      if (
+        draggedWord.category === Categories.NOUN &&
+        droppedWord.category === Categories.NOUN
+      ) {
+        setPopover({
+          words: [droppedWord, draggedWord],
+          position: {
+            x: droppedWord.position.x + 200,
+            y: droppedWord.position.y - 50
+          }
+        });
+        setCanvasWords((oldWords) =>
+          oldWords
+            .filter((word) => word.id !== draggedWord.id)
+            .concat({
+              ...draggedWord,
+              position: {
+                x: droppedWord.position.x + 100,
+                y: droppedWord.position.y
+              }
+            })
+        );
+        return;
+      }
+
+      if (!canMerge(draggedWord, droppedWord, toast)) return;
+
+      const newWords = mergeWords(
         {
           ...draggedWord,
-          id: draggedWord.base + Date.now(),
           position: {
-            x: draggedWord.position.x + delta.x,
-            y: draggedWord.position.y + delta.y
-          },
-          isOnCanvas: true
-        }
-      ]);
+            x: droppedWord.position.x,
+            y: droppedWord.position.y
+          }
+        },
+        droppedWord,
+        canvasWords
+      );
+      setCanvasWords(newWords);
     }
   }
 
@@ -134,40 +144,20 @@ export default function Home() {
           />
         )}
         <DndContext onDragEnd={handleDragEnd}>
-          <Tabs defaultValue="noun" className="w-1/5 relative top-0 left-0">
-            <TabsList>
-              <TabsTrigger value="particle">Particles</TabsTrigger>
-              <TabsTrigger value="verb">Verbs</TabsTrigger>
-              <TabsTrigger value="noun">Nouns</TabsTrigger>
-            </TabsList>
-            <WordCategoryTab
-              words={WORDS_DATA} // Pass the non stateful data
-              category={Categories.PARTICLE}
-            />
-            <WordCategoryTab
-              words={WORDS_DATA} // Pass the non stateful data
-              category={Categories.VERB}
-            />
-            <WordCategoryTab
-              words={WORDS_DATA} // Pass the non stateful data
-              category={Categories.NOUN}
-            />
-          </Tabs>
-          <div className="relative w-4/5 h-100vh mt-10 bg-gray-100">
-            {canvasWords
-              .filter((word) => !word.hide)
-              .map((word) => (
-                <div key={word.id}>
-                  {word.parts.length > 0 ? (
-                    <PartsTooltip word={word} />
-                  ) : (
-                    <WordBlock word={word} id={word.id}>
-                      {word.base}
-                    </WordBlock>
-                  )}
-                </div>
-              ))}
-          </div>
+          <WordTabs />
+          <Canvas>
+            {canvasWords.map((word) => (
+              <div key={word.id}>
+                {word.parts.length > 0 ? (
+                  <PartsTooltip word={word} />
+                ) : (
+                  <WordBlock word={word} id={word.id}>
+                    {word.base}
+                  </WordBlock>
+                )}
+              </div>
+            ))}
+          </Canvas>
         </DndContext>
         <Toaster />
       </main>

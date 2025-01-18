@@ -34,7 +34,7 @@ const WordBlock = (props: WordBlockProps) => {
     position: "absolute" as const,
     left: `${position.x}px`,
     top: `${position.y}px`,
-    zIndex: 1
+    zIndex: 999
   };
 
   return (

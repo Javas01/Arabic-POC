@@ -1,41 +1,46 @@
 import { TabsContent } from "@/components/ui/tabs";
-import PartsTooltip from "./PartsTooltip";
-import { WordNode, Categories } from "./types";
-import WordBlock from "./WordBlock";
+import { Categories } from "./types";
+import { useDroppable } from "@dnd-kit/core";
+import React from "react";
 
-export default function WordCategoryTab({
-  words,
-  category
-}: {
-  words: WordNode[];
-  category: Categories;
-}) {
-  return (
-    <TabsContent
-      value={category}
-      style={{
-        height: "calc(100vh - 2rem)",
-        width: "15rem",
-        overflowY: "auto",
-        overflowX: "hidden",
-        scrollbarWidth: "none",
-        border: "1px solid #ccc"
-      }}
-    >
-      {words
-        .filter((word) => !word.hide)
-        .filter((word) => word.category === category)
-        .map((word) => (
-          <div key={word.id}>
-            {word.parts.length > 0 ? (
-              <PartsTooltip word={word} />
-            ) : (
-              <WordBlock word={word} id={word.base + Date.now()}>
-                {word.base}
-              </WordBlock>
-            )}
-          </div>
-        ))}
-    </TabsContent>
-  );
-}
+const WordCategoryTab = React.memo(
+  ({
+    category,
+    children
+  }: {
+    category: Categories;
+    children: React.ReactNode;
+  }) => {
+    const { over, setNodeRef } = useDroppable({
+      id: `wordtab-${category}`
+    });
+
+    return (
+      <TabsContent
+        ref={(node) => {
+          setNodeRef(node);
+        }}
+        value={category}
+        style={{
+          height: "calc(100vh - 2rem)",
+          width: "15rem",
+          overflowY: "auto",
+          overflowX: "hidden",
+          scrollbarWidth: "none",
+          border: "1px solid #ccc",
+          // highlight the drop area?
+          background:
+            (over?.id as string)?.split("-")[0] === "wordtab"
+              ? "rgb(229 231 235 / var(--tw-bg-opacity, 1))"
+              : "rgb(243 244 246 / var(--tw-bg-opacity, 1))"
+        }}
+      >
+        {children}
+      </TabsContent>
+    );
+  }
+);
+
+WordCategoryTab.displayName = "WordCategoryTab";
+
+export default WordCategoryTab;

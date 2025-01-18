@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import { useDroppable } from "@dnd-kit/core";
 
@@ -19,8 +20,8 @@ const Canvas = ({ children }: CanvasProps) => {
         // highlight the drop area
         background:
           over?.id === "canvas"
-            ? "rgb(229 231 235 / var(--tw-bg-opacity, 1))"
-            : "rgb(243 244 246 / var(--tw-bg-opacity, 1))"
+            ? "rgb(55 65 81 / var(--tw-bg-opacity, 1))" // Darker gray for dark mode
+            : "rgb(31 41 55 / var(--tw-bg-opacity, 1))" // Even darker background for contrast
       }}
     >
       {children}

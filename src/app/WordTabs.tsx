@@ -1,10 +1,15 @@
+"use client";
 import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import React from "react";
 import { WORDS_DATA } from "./fakeData";
 import { Categories } from "./types";
-import WordCategoryTab from "./WordCategoryTab";
 import PartsTooltip from "./PartsTooltip";
 import WordBlock from "./WordBlock";
+import dynamic from "next/dynamic";
+
+const WordCategoryTab = dynamic(() => import("./WordCategoryTab"), {
+  ssr: false
+});
 
 const WordTabs = () => {
   return (

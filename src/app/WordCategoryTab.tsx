@@ -1,3 +1,4 @@
+"use client";
 import { TabsContent } from "@/components/ui/tabs";
 import { Categories } from "./types";
 import { useDroppable } from "@dnd-kit/core";
@@ -31,8 +32,8 @@ const WordCategoryTab = React.memo(
           // highlight the drop area?
           background:
             (over?.id as string)?.split("-")[0] === "wordtab"
-              ? "rgb(229 231 235 / var(--tw-bg-opacity, 1))"
-              : "rgb(243 244 246 / var(--tw-bg-opacity, 1))"
+              ? "rgb(55 65 81 / var(--tw-bg-opacity, 1))" // Dark gray for dark mode
+              : "rgb(31 41 55 / var(--tw-bg-opacity, 1))" // Even darker gray
         }}
       >
         {children}

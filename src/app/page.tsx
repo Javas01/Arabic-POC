@@ -1,18 +1,25 @@
 "use client";
-
+// import { scan } from "react-scan"; // import this BEFORE react
+import React from "react";
 import { Toaster } from "@/components/ui/toaster";
 import { useToast } from "@/hooks/use-toast";
 import { DndContext, DragEndEvent } from "@dnd-kit/core";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { Categories, WordNode } from "./types";
 import { canMerge } from "./canMerge";
 import { mergeWords } from "./mergeWords";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import Popover from "./Popover";
 import WordTabs from "./WordTabs";
-import Canvas from "./Canvas";
 import PartsTooltip from "./PartsTooltip";
-import WordBlock from "./WordBlock";
+import dynamic from "next/dynamic";
+
+const WordBlock = dynamic(() => import("./WordBlock"), {
+  ssr: false
+});
+const Canvas = dynamic(() => import("./Canvas"), {
+  ssr: false
+});
 
 type Popover = {
   words: WordNode[];
@@ -23,10 +30,6 @@ export default function Home() {
   const { toast } = useToast();
   const [canvasWords, setCanvasWords] = useState<WordNode[]>([]);
   const [popover, setPopover] = useState<Popover | null>(null);
-
-  useEffect(() => {
-    console.log("canvasWords", canvasWords);
-  }, [canvasWords]);
 
   function handleDragEnd(event: DragEndEvent) {
     const { over, active, delta } = event;

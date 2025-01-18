@@ -1,10 +1,12 @@
 export type WordNode = {
+  id: string;
   base: string;
   english: string;
   color: string;
   category: Categories;
   hide: boolean;
   parts: WordNode[];
+  isOnCanvas: boolean;
   position: {
     x: number;
     y: number;

@@ -21,7 +21,9 @@ export function mergeWords(
     ..._words,
     {
       base: newWord,
+      id: newWord,
       english: "", // TODO: Add a way to add the english word
+      isOnCanvas: true,
       color: Category.NOUN.color, // TODO: Add a way to add the color
       category: Categories.NOUN, // TODO: Add a way to add the category
       hide: false,
@@ -34,7 +36,7 @@ export function mergeWords(
   ];
 }
 
-function getNewWord(draggedWord: WordNode, droppedWord: WordNode) {
+export function getNewWord(draggedWord: WordNode, droppedWord: WordNode) {
   // Noun + Noun (Posessive)
   // if (
   //   draggedWord.category === Categories.NOUN &&
@@ -54,5 +56,6 @@ function getNewWord(draggedWord: WordNode, droppedWord: WordNode) {
   )
     return "ال" + draggedWord.base + "ُ " + "ال" + droppedWord.base + "ُ ";
 
-  return draggedWord.base + droppedWord.base + "ِ";
+  // default
+  return draggedWord.base + droppedWord.base;
 }

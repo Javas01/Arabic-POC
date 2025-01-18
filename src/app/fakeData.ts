@@ -23,65 +23,79 @@ export const WORDS_DATA = [
   {
     ...nounSpreadObj,
     base: "كتاب",
+    isOnCanvas: false,
     english: "Book",
     position: {
-      x: 0,
-      y: 0
-    }
+      x: 50,
+      y: 100
+    },
+    id: "كتاب"
   },
   {
     ...nounSpreadObj,
     base: "بيت",
+    isOnCanvas: false,
     english: "House",
     position: {
-      x: 0,
-      y: 400
-    }
+      x: 50,
+      y: 200
+    },
+    id: "بيت"
   },
   {
     ...particleSpreadObj,
     base: "في",
+    isOnCanvas: false,
     english: "In",
     position: {
-      x: 0,
+      x: 50,
       y: 100
-    }
+    },
+    id: "في"
   },
   {
     ...particleSpreadObj,
     base: "على",
+    isOnCanvas: false,
     english: "On",
     position: {
-      x: 0,
-      y: 500
-    }
+      x: 50,
+      y: 200
+    },
+    id: "على"
   },
   {
     ...particleSpreadObj,
     base: "ال",
+    isOnCanvas: false,
     english: "The",
     position: {
-      x: 0,
-      y: 200
-    }
+      x: 50,
+      y: 300
+    },
+    id: "ال"
   },
   {
     ...verbSpreadObj,
     base: "ذهب",
+    isOnCanvas: false,
     english: "Went",
     position: {
-      x: 0,
-      y: 600
-    }
+      x: 50,
+      y: 100
+    },
+    id: "ذهب"
   },
   {
     ...verbSpreadObj,
     base: "قرأ",
+    isOnCanvas: false,
     english: "Read",
     position: {
-      x: 0,
-      y: 700
-    }
+      x: 50,
+      y: 200
+    },
+    id: "قرأ"
   }
 ];
 

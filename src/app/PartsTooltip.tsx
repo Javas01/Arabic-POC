@@ -8,29 +8,18 @@ import WordBlock from "./WordBlock";
 import { WordNode } from "./types";
 
 type PartsTooltipProps = {
-  base: string;
-  color: string;
-  position: {
-    x: number;
-    y: number;
-  };
-  parts: WordNode[];
+  word: WordNode;
 };
 
-export const PartsTooltip = ({
-  base,
-  color,
-  position,
-  parts
-}: PartsTooltipProps) => {
+export const PartsTooltip = ({ word }: PartsTooltipProps) => {
   return (
-    <Tooltip key={base}>
-      <WordBlock id={base} color={color} position={position}>
-        <TooltipTrigger>{base}</TooltipTrigger>
+    <Tooltip key={word.id}>
+      <WordBlock id={word.base + Date.now()} word={word}>
+        <TooltipTrigger>{word.base}</TooltipTrigger>
       </WordBlock>
       <TooltipContent side="top" align="center" sideOffset={30}>
         <div className="flex flex-row-reverse text-2xl justify-between min-w-20">
-          {parts.map((part, i) => (
+          {word.parts.map((part, i) => (
             <span
               style={{
                 color: part.color,

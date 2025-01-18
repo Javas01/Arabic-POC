@@ -11,41 +11,71 @@ import { WORDS_DATA } from "./fakeData";
 import { mergeWords } from "./mergeWords";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { PartsTooltip } from "./PartsTooltip";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import WordCategoryTab from "./WordCategoryTab";
+import Popover from "./Popover";
 
 const WordBlock = dynamic(() => import("./WordBlock"), { ssr: false });
+
+type Popover = {
+  words: WordNode[];
+  position: { x: number; y: number };
+};
 
 export default function Home() {
   const { toast } = useToast();
   const [canvasWords, setCanvasWords] = useState<WordNode[]>([]);
-  const [showPopover, setShowPopover] = useState<WordNode[]>([]);
-
-  function showNounNounPopover(id: WordNode, id2: WordNode) {
-    setShowPopover([id, id2]);
-  }
+  const [popover, setPopover] = useState<Popover | null>(null);
 
   function handleDragEnd(event: DragEndEvent) {
     const { over, active } = event;
     const draggedWord = active.data.current as WordNode;
     const droppedWord = over?.data.current as WordNode;
+
     if (draggedWord.isOnCanvas || droppedWord?.isOnCanvas) {
       if (over) {
         if (over.id === active.id) return;
         // Attempt to merge the dragged word with the word it was dropped on
-        draggedWord.position.x = over.rect.left + over.rect.width;
-        draggedWord.position.y = over.rect.top;
-
         if (
           draggedWord.category === Categories.NOUN &&
           droppedWord.category === Categories.NOUN
         ) {
-          showNounNounPopover(droppedWord, draggedWord);
+          setPopover({
+            words: [droppedWord, draggedWord],
+            position: {
+              x: droppedWord.position.x + 200,
+              y: droppedWord.position.y - 50
+            }
+          });
+          setCanvasWords((oldWords) =>
+            oldWords.map((word) =>
+              word.id === draggedWord.id
+                ? {
+                    ...word,
+                    position: {
+                      x: droppedWord.position.x + 100,
+                      y: droppedWord.position.y
+                    }
+                  }
+                : word
+            )
+          );
           return;
         }
 
         if (!canMerge(draggedWord, droppedWord, toast)) return;
 
-        const newWords = mergeWords(draggedWord, droppedWord, canvasWords);
+        const newWords = mergeWords(
+          {
+            ...draggedWord,
+            position: {
+              x: draggedWord.position.x + event.delta.x,
+              y: draggedWord.position.y + event.delta.y
+            }
+          },
+          droppedWord,
+          canvasWords
+        );
         setCanvasWords(newWords);
       } else {
         // Move the dragged word to the new position
@@ -80,9 +110,31 @@ export default function Home() {
     }
   }
 
+  function handlePopoverChoice(event: React.MouseEvent<HTMLButtonElement>) {
+    if (!popover) return;
+    if (!event.target) return;
+    const newWords = mergeWords(
+      popover.words[0],
+      popover.words[1],
+      canvasWords,
+      (event.target as HTMLElement).innerText
+    );
+    setCanvasWords(newWords);
+  }
+
   return (
     <TooltipProvider delayDuration={0}>
-      <main className="flex flex-row min-h-screen py-2">
+      <main
+        className="flex flex-row min-h-screen py-2"
+        onClick={() => setPopover(null)} // TODO: create a backdrop component to handle this
+      >
+        {popover && (
+          <Popover
+            position={popover.position}
+            words={popover.words}
+            onChoice={handlePopoverChoice}
+          />
+        )}
         <DndContext onDragEnd={handleDragEnd}>
           <Tabs defaultValue="noun" className="w-1/5 relative top-0 left-0">
             <TabsList>
@@ -93,20 +145,14 @@ export default function Home() {
             <WordCategoryTab
               words={WORDS_DATA} // Pass the non stateful data
               category={Categories.PARTICLE}
-              showPopover={showPopover}
-              setShowPopover={setShowPopover}
             />
             <WordCategoryTab
               words={WORDS_DATA} // Pass the non stateful data
               category={Categories.VERB}
-              showPopover={showPopover}
-              setShowPopover={setShowPopover}
             />
             <WordCategoryTab
               words={WORDS_DATA} // Pass the non stateful data
               category={Categories.NOUN}
-              showPopover={showPopover}
-              setShowPopover={setShowPopover}
             />
           </Tabs>
           <div className="relative w-4/5 h-100vh mt-10 bg-gray-100">
@@ -117,12 +163,7 @@ export default function Home() {
                   {word.parts.length > 0 ? (
                     <PartsTooltip word={word} />
                   ) : (
-                    <WordBlock
-                      word={word}
-                      id={word.id}
-                      showPopover={showPopover}
-                      setShowPopover={setShowPopover}
-                    >
+                    <WordBlock word={word} id={word.id}>
                       {word.base}
                     </WordBlock>
                   )}
@@ -133,51 +174,5 @@ export default function Home() {
         <Toaster />
       </main>
     </TooltipProvider>
-  );
-}
-
-function WordCategoryTab({
-  words,
-  category,
-  showPopover,
-  setShowPopover
-}: {
-  words: WordNode[];
-  category: Categories;
-  showPopover: WordNode[];
-  setShowPopover: (value: React.SetStateAction<WordNode[]>) => void;
-}) {
-  return (
-    <TabsContent
-      value={category}
-      style={{
-        height: "calc(100vh - 2rem)",
-        width: "15rem",
-        overflowY: "auto",
-        overflowX: "hidden",
-        scrollbarWidth: "none",
-        border: "1px solid #ccc"
-      }}
-    >
-      {words
-        .filter((word) => !word.hide)
-        .filter((word) => word.category === category)
-        .map((word) => (
-          <div key={word.id}>
-            {word.parts.length > 0 ? (
-              <PartsTooltip word={word} />
-            ) : (
-              <WordBlock
-                word={word}
-                id={word.base + Date.now()}
-                showPopover={showPopover}
-                setShowPopover={setShowPopover}
-              >
-                {word.base}
-              </WordBlock>
-            )}
-          </div>
-        ))}
-    </TabsContent>
   );
 }

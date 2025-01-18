@@ -1,5 +1,5 @@
 "use client";
-import React, { Dispatch, SetStateAction } from "react";
+import React from "react";
 import { CSS } from "@dnd-kit/utilities";
 import { useDraggable, useDroppable } from "@dnd-kit/core";
 // import { getNewWord } from "./mergeWords";
@@ -9,8 +9,6 @@ type WordBlockProps = {
   children?: React.ReactNode;
   word: WordNode;
   id: string;
-  showPopover?: WordNode[];
-  setShowPopover?: Dispatch<SetStateAction<WordNode[]>>;
 };
 
 const WordBlock = (props: WordBlockProps) => {
@@ -49,26 +47,6 @@ const WordBlock = (props: WordBlockProps) => {
       {...listeners}
       {...attributes}
     >
-      {/* {props.showPopover.find((x) => x.id === props.id) && (
-        <div
-          style={{
-            padding: "1rem",
-            borderRadius: "0.5rem",
-            fontSize: "1.5rem",
-            background: "white",
-            color: "black",
-            border: "2px solid black",
-            textAlign: "center",
-            marginBottom: "1rem",
-            width: "400px",
-            marginLeft: "-150px"
-          }}
-        >
-          <button>
-            {getNewWord(props.showPopover[0], props.showPopover[1])}
-          </button>
-        </div>
-      )} */}
       <div
         style={{
           background: color,
@@ -78,7 +56,7 @@ const WordBlock = (props: WordBlockProps) => {
           borderLeft: canConnect ? "5px solid white" : "",
           borderRight: canConnect ? "5px solid white" : "",
           textAlign: "center",
-          width: "100px"
+          minWidth: "100px"
         }}
       >
         {props.children}

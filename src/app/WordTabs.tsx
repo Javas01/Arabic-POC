@@ -21,19 +21,22 @@ const WordTabs = () => {
       </TabsList>
       {Object.values(Categories).map((category) => (
         <WordCategoryTab category={category} key={category}>
-          {WORDS_DATA.filter((word) => word.category === category).map(
-            (word) => (
-              <div key={word.id}>
-                {word.parts.length > 0 ? (
-                  <PartsTooltip word={word} />
-                ) : (
-                  <WordBlock word={word} id={word.base + Date.now()}>
-                    {word.base}
-                  </WordBlock>
-                )}
-              </div>
-            )
-          )}
+          {WORDS_DATA.filter(
+            (word) =>
+              word.category === category ||
+              (word.category === "definite" && category === "noun") ||
+              (word.category === "pronoun" && category === "noun")
+          ).map((word) => (
+            <div key={word.id}>
+              {word.parts.length > 0 ? (
+                <PartsTooltip word={word} />
+              ) : (
+                <WordBlock word={word} id={word.base + Date.now()}>
+                  {word.base}
+                </WordBlock>
+              )}
+            </div>
+          ))}
         </WordCategoryTab>
       ))}
     </Tabs>

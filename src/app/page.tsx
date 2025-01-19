@@ -84,7 +84,7 @@ export default function Home() {
         droppedWord.category === Categories.NOUN
       ) {
         setPopover({
-          words: [droppedWord, draggedWord],
+          words: [draggedWord, droppedWord],
           position: {
             x: droppedWord.position.x + 200,
             y: droppedWord.position.y - 50
@@ -132,6 +132,9 @@ export default function Home() {
     );
     setCanvasWords(newWords);
   }
+
+  const str = "مِنْ";
+  console.log("Test", str.split(""));
 
   return (
     <TooltipProvider delayDuration={0}>

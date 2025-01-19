@@ -19,6 +19,26 @@ export function canMerge(
   if (node1.category === Categories.NOUN && node2.category === Categories.NOUN)
     return true; // Noun + Noun
 
+  if (
+    node1.category === Categories.DEFINITE &&
+    node2.category === Categories.NOUN
+  )
+    return true; // Definite + Noun
+
+  if (
+    (node1.category === Categories.PRONOUN &&
+      node2.category === Categories.NOUN) ||
+    (node1.category === Categories.NOUN &&
+      node2.category === Categories.PRONOUN)
+  )
+    return true; // Noun + Definite
+
+  if (
+    node1.category === Categories.PARTICLE &&
+    node2.category === Categories.PRONOUN
+  )
+    return true; // Particle + Pronoun
+
   // Add more grammar rules as needed
   showToast({
     title: "Invalid Merge",

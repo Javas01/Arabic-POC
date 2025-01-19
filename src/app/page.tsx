@@ -152,7 +152,26 @@ export default function Home() {
             {canvasWords.map((word) => (
               <div key={word.id}>
                 {word.parts.length > 0 ? (
-                  <PartsTooltip word={word} />
+                  <PartsTooltip
+                    word={word}
+                    onRightClick={() => {
+                      setCanvasWords((oldWords) =>
+                        oldWords
+                          .filter((w) => w.id !== word.id)
+                          .concat(
+                            word.parts.map((part, i) => ({
+                              ...part,
+                              position: {
+                                x: word.position.x + 100 * i,
+                                y: word.position.y
+                              },
+                              id: part.base + Date.now() + i, // add i to make the id unique
+                              isOnCanvas: true
+                            }))
+                          )
+                      );
+                    }}
+                  />
                 ) : (
                   <WordBlock word={word} id={word.id}>
                     {word.base}

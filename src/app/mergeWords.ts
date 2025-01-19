@@ -6,10 +6,9 @@ export function mergeWords(
   allWords: WordNode[],
   customCombinedWord?: string
 ) {
-  const _words = allWords.filter((word) => {
-    if (word.base === draggedWord.base || word.base === droppedWord.base)
-      return false;
-  });
+  const _words = allWords.filter((word) =>
+    word.id === draggedWord.id || word.id === droppedWord.id ? false : true
+  );
   const _parts = [
     ...(draggedWord.parts.length > 0 ? [...draggedWord.parts] : [draggedWord]),
     ...(droppedWord.parts.length > 0 ? [...droppedWord.parts] : [droppedWord])

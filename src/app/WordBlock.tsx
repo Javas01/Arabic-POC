@@ -2,13 +2,13 @@
 import React from "react";
 import { CSS } from "@dnd-kit/utilities";
 import { useDraggable, useDroppable } from "@dnd-kit/core";
-// import { getNewWord } from "./mergeWords";
 import { WordNode } from "./types";
 
 type WordBlockProps = {
   children?: React.ReactNode;
   word: WordNode;
   id: string;
+  onRightClick?: () => void;
 };
 
 const WordBlock = (props: WordBlockProps) => {
@@ -48,6 +48,10 @@ const WordBlock = (props: WordBlockProps) => {
       {...attributes}
     >
       <div
+        onContextMenu={(e) => {
+          e.preventDefault();
+          props.onRightClick?.();
+        }}
         style={{
           background: color,
           padding: "1rem",

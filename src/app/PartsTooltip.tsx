@@ -10,12 +10,17 @@ import { WordNode } from "./types";
 
 type PartsTooltipProps = {
   word: WordNode;
+  onRightClick?: () => void;
 };
 
-export const PartsTooltip = ({ word }: PartsTooltipProps) => {
+export const PartsTooltip = ({ word, onRightClick }: PartsTooltipProps) => {
   return (
     <Tooltip key={word.id}>
-      <WordBlock id={word.base + Date.now()} word={word}>
+      <WordBlock
+        id={word.base + Date.now()}
+        word={word}
+        onRightClick={onRightClick}
+      >
         <TooltipTrigger>{word.base}</TooltipTrigger>
       </WordBlock>
       <TooltipContent side="top" align="center" sideOffset={30}>

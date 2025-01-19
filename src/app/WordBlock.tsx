@@ -9,10 +9,12 @@ type WordBlockProps = {
   word: WordNode;
   id: string;
   onRightClick?: () => void;
+  styleOverride?: React.CSSProperties;
 };
 
 const WordBlock = (props: WordBlockProps) => {
   const id = props.id;
+  const styleOverride = props.styleOverride;
   const { color, position } = props.word;
   const {
     attributes,
@@ -43,7 +45,10 @@ const WordBlock = (props: WordBlockProps) => {
         setDraggableNodeRef(node);
         setDroppableNodeRef(node);
       }}
-      style={style}
+      style={{
+        ...style,
+        ...styleOverride
+      }}
       {...listeners}
       {...attributes}
     >

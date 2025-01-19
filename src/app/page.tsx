@@ -3,7 +3,7 @@
 import React from "react";
 import { Toaster } from "@/components/ui/toaster";
 import { useToast } from "@/hooks/use-toast";
-import { DndContext, DragEndEvent } from "@dnd-kit/core";
+import { DndContext, DragEndEvent, DragOverlay } from "@dnd-kit/core";
 import { useState } from "react";
 import { Categories, WordNode } from "./types";
 import { canMerge } from "./canMerge";
@@ -33,7 +33,7 @@ export default function Home() {
 
   function handleDragEnd(event: DragEndEvent) {
     const { over, active, delta } = event;
-    const draggedWord = active.data.current as WordNode;
+    let draggedWord = active.data.current as WordNode;
     const droppedWord = over?.data.current as WordNode;
 
     if (over && (over.id as string).split("-")[0] === "wordtab") {
@@ -60,23 +60,26 @@ export default function Home() {
           )
         );
       } else {
+        if (!activeWord) return;
         // Add the dragged word to the canvas
         setCanvasWords((oldWords) =>
           oldWords.concat({
-            ...draggedWord,
+            ...activeWord,
             position: {
-              x: draggedWord.position.x + delta.x,
-              y: draggedWord.position.y + delta.y
+              x: activeWord.position.x + delta.x - 400,
+              y: activeWord.position.y + delta.y - 150
             },
-            id: draggedWord.base + Date.now(),
+            id: activeWord.base + Date.now(),
             isOnCanvas: true
           })
         );
+        setactiveWord(null);
       }
       return;
     }
 
     if (droppedWord?.isOnCanvas) {
+      if (activeWord) draggedWord = activeWord;
       if (droppedWord.id === draggedWord.id) return;
       // Attempt to merge the dragged word with the word it was dropped on
       if (
@@ -101,6 +104,7 @@ export default function Home() {
               }
             })
         );
+        setactiveWord(null);
         return;
       }
 
@@ -118,6 +122,7 @@ export default function Home() {
         canvasWords
       );
       setCanvasWords(newWords);
+      setactiveWord(null);
     }
   }
 
@@ -133,8 +138,7 @@ export default function Home() {
     setCanvasWords(newWords);
   }
 
-  const str = "مِنْ";
-  console.log("Test", str.split(""));
+  const [activeWord, setactiveWord] = useState<WordNode | null>(null);
 
   return (
     <TooltipProvider delayDuration={0}>
@@ -149,7 +153,19 @@ export default function Home() {
             onChoice={handlePopoverChoice}
           />
         )}
-        <DndContext onDragEnd={handleDragEnd}>
+        <DndContext
+          onDragStart={({ active, activatorEvent }) => {
+            if ((activatorEvent as MouseEvent).screenX < 200)
+              setactiveWord({
+                ...(active.data.current as WordNode),
+                position: {
+                  x: (activatorEvent as MouseEvent).screenX,
+                  y: (activatorEvent as MouseEvent).screenY
+                }
+              });
+          }}
+          onDragEnd={handleDragEnd}
+        >
           <WordTabs />
           <Canvas>
             {canvasWords.map((word) => (
@@ -183,6 +199,23 @@ export default function Home() {
               </div>
             ))}
           </Canvas>
+          <DragOverlay>
+            {activeWord && (
+              <WordBlock
+                styleOverride={{
+                  position: "fixed",
+                  transform: "none",
+                  left: "unset",
+                  top: "unset",
+                  zIndex: 999
+                }}
+                word={activeWord}
+                id="active-word"
+              >
+                {activeWord.base}
+              </WordBlock>
+            )}
+          </DragOverlay>
         </DndContext>
         <Toaster />
       </main>

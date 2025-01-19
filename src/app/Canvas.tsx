@@ -15,7 +15,7 @@ const Canvas = ({ children }: CanvasProps) => {
       ref={(node) => {
         setNodeRef(node);
       }}
-      className="relative w-4/5 h-100vh mt-10 z-10"
+      className="relative w-4/5 h-100vh z-10"
       style={{
         // highlight the drop area
         background:

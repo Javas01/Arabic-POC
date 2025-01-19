@@ -33,13 +33,24 @@ const verbSpreadObj = {
 
 export const WORDS_DATA = [
   {
+    ...definiteSpreadObj,
+    base: "ال",
+    isOnCanvas: false,
+    english: ["The"],
+    position: {
+      x: 0,
+      y: 0
+    },
+    id: "ال"
+  },
+  {
     ...nounSpreadObj,
     base: "كتاب",
     isOnCanvas: false,
     english: ["Book"],
     position: {
-      x: 50,
-      y: 300
+      x: 0,
+      y: 0
     },
     id: "كتاب"
   },
@@ -49,8 +60,8 @@ export const WORDS_DATA = [
     isOnCanvas: false,
     english: ["House"],
     position: {
-      x: 50,
-      y: 200
+      x: 0,
+      y: 0
     },
     id: "بيت"
   },
@@ -67,8 +78,8 @@ export const WORDS_DATA = [
       special: "هِ"
     },
     position: {
-      x: 50,
-      y: 400
+      x: 0,
+      y: 0
     },
     id: "هُوَ"
   },
@@ -84,8 +95,8 @@ export const WORDS_DATA = [
       special: "هِمَاْ"
     },
     position: {
-      x: 50,
-      y: 500
+      x: 0,
+      y: 0
     },
     id: "هُمَاْ"
   },
@@ -101,8 +112,8 @@ export const WORDS_DATA = [
       special: "هِمْ"
     },
     position: {
-      x: 50,
-      y: 600
+      x: 0,
+      y: 0
     },
     id: "هُمْ"
   },
@@ -117,8 +128,8 @@ export const WORDS_DATA = [
       genitive: "هَا"
     },
     position: {
-      x: 50,
-      y: 700
+      x: 0,
+      y: 0
     },
     id: "هِيَ"
   },
@@ -134,8 +145,8 @@ export const WORDS_DATA = [
       special: "هِنَّ"
     },
     position: {
-      x: 50,
-      y: 800
+      x: 0,
+      y: 0
     },
     id: "هُنَّ"
   },
@@ -150,8 +161,8 @@ export const WORDS_DATA = [
       genitive: "كَ"
     },
     position: {
-      x: 50,
-      y: 900
+      x: 0,
+      y: 0
     },
     id: "أَنْتَ"
   },
@@ -166,8 +177,8 @@ export const WORDS_DATA = [
       genitive: "كُمَاْ"
     },
     position: {
-      x: 50,
-      y: 1000
+      x: 0,
+      y: 0
     },
     id: "أَنْتُمَاْ"
   },
@@ -182,8 +193,8 @@ export const WORDS_DATA = [
       genitive: "كُمْ"
     },
     position: {
-      x: 50,
-      y: 1100
+      x: 0,
+      y: 0
     },
     id: "أَنْتُمْ"
   },
@@ -198,8 +209,8 @@ export const WORDS_DATA = [
       genitive: "كِ"
     },
     position: {
-      x: 50,
-      y: 1200
+      x: 0,
+      y: 0
     },
     id: "أَنْتِ"
   },
@@ -214,8 +225,8 @@ export const WORDS_DATA = [
       genitive: "كُنَّ"
     },
     position: {
-      x: 50,
-      y: 1300
+      x: 0,
+      y: 0
     },
     id: "أَنْتُنَّ"
   },
@@ -230,8 +241,8 @@ export const WORDS_DATA = [
       genitive: "يْ"
     },
     position: {
-      x: 50,
-      y: 1400
+      x: 0,
+      y: 0
     },
     id: "أَنَاْ"
   },
@@ -246,8 +257,8 @@ export const WORDS_DATA = [
       genitive: "نَاْ"
     },
     position: {
-      x: 50,
-      y: 1500
+      x: 0,
+      y: 0
     },
     id: "نَحْنُ"
   },
@@ -258,8 +269,8 @@ export const WORDS_DATA = [
     english: ["In"],
     effects: ["genitive"],
     position: {
-      x: 50,
-      y: 100
+      x: 0,
+      y: 0
     },
     id: "فيْ"
   },
@@ -270,8 +281,8 @@ export const WORDS_DATA = [
     english: ["On"],
     effects: ["genitive"],
     position: {
-      x: 50,
-      y: 200
+      x: 0,
+      y: 0
     },
     id: "علىْ"
   },
@@ -282,8 +293,8 @@ export const WORDS_DATA = [
     english: ["From"],
     effects: ["genitive"],
     position: {
-      x: 50,
-      y: 300
+      x: 0,
+      y: 0
     },
     id: "مِنْ"
   },
@@ -294,8 +305,8 @@ export const WORDS_DATA = [
     english: ["Certainly"],
     effects: ["accusative"],
     position: {
-      x: 50,
-      y: 400
+      x: 0,
+      y: 0
     },
     id: "إنَّ"
   },
@@ -306,8 +317,8 @@ export const WORDS_DATA = [
     english: ["And", "By"],
     effects: ["nominative", "genitive"],
     position: {
-      x: 50,
-      y: 500
+      x: 0,
+      y: 0
     },
     id: "وَ"
   },
@@ -318,8 +329,8 @@ export const WORDS_DATA = [
     english: ["Perhaps"],
     effects: ["accusative"],
     position: {
-      x: 50,
-      y: 600
+      x: 0,
+      y: 0
     },
     id: "لَيْسَ"
   },
@@ -331,8 +342,8 @@ export const WORDS_DATA = [
     effects: ["genitive"],
     special: "لَ",
     position: {
-      x: 50,
-      y: 700
+      x: 0,
+      y: 0
     },
     id: "لِ"
   },
@@ -343,8 +354,8 @@ export const WORDS_DATA = [
     english: ["With"],
     effects: ["genitive"],
     position: {
-      x: 50,
-      y: 800
+      x: 0,
+      y: 0
     },
     id: "بِ"
   },
@@ -355,8 +366,8 @@ export const WORDS_DATA = [
     english: ["About"],
     effects: ["genitive"],
     position: {
-      x: 50,
-      y: 900
+      x: 0,
+      y: 0
     },
     id: "عَنْ"
   },
@@ -367,21 +378,10 @@ export const WORDS_DATA = [
     english: ["With"],
     effects: ["genitive"],
     position: {
-      x: 50,
-      y: 1000
+      x: 0,
+      y: 0
     },
     id: "مَعَ"
-  },
-  {
-    ...definiteSpreadObj,
-    base: "ال",
-    isOnCanvas: false,
-    english: ["The"],
-    position: {
-      x: 50,
-      y: 100
-    },
-    id: "ال"
   },
   {
     ...verbSpreadObj,
@@ -389,8 +389,8 @@ export const WORDS_DATA = [
     isOnCanvas: false,
     english: ["Went"],
     position: {
-      x: 50,
-      y: 100
+      x: 0,
+      y: 0
     },
     id: "ذهب"
   },
@@ -400,8 +400,8 @@ export const WORDS_DATA = [
     isOnCanvas: false,
     english: ["Read"],
     position: {
-      x: 50,
-      y: 200
+      x: 0,
+      y: 0
     },
     id: "قرأ"
   }

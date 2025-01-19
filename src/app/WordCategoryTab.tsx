@@ -23,13 +23,15 @@ const WordCategoryTab = React.memo(
         }}
         value={category}
         style={{
-          height: "calc(100vh - 2rem)",
+          height: "calc(90vh - 2rem)",
           width: "15rem",
           overflowY: "auto",
           overflowX: "hidden",
           scrollbarWidth: "none",
           border: "1px solid #ccc",
-          // highlight the drop area?
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
           background:
             (over?.id as string)?.split("-")[0] === "wordtab"
               ? "rgb(55 65 81 / var(--tw-bg-opacity, 1))" // Dark gray for dark mode

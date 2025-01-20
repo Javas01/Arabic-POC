@@ -66,6 +66,105 @@ export const WORDS_DATA = [
     id: "بيت"
   },
   {
+    ...nounSpreadObj,
+    base: "ربٌّ",
+    isOnCanvas: false,
+    english: ["Lord"],
+    position: {
+      x: 0,
+      y: 0
+    },
+    id: "ربٌّ"
+  },
+  {
+    ...nounSpreadObj,
+    base: "نَّاسٌ",
+    isOnCanvas: false,
+    english: ["Mankind"],
+    position: {
+      x: 0,
+      y: 0
+    },
+    id: "نَّاسٌ"
+  },
+  {
+    ...nounSpreadObj,
+    base: "إِلَٰهٌ",
+    isOnCanvas: false,
+    english: ["god"],
+    position: {
+      x: 0,
+      y: 0
+    },
+    id: "إِلَٰهٌ"
+  },
+  {
+    ...nounSpreadObj,
+    base: "شَرٌّ",
+    isOnCanvas: false,
+    english: ["Evil"],
+    position: {
+      x: 0,
+      y: 0
+    },
+    id: "شَرٌّ"
+  },
+  {
+    ...nounSpreadObj,
+    base: "وَسْوَاسٌ",
+    isOnCanvas: false,
+    english: ["Whisperer"],
+    position: {
+      x: 0,
+      y: 0
+    },
+    id: "وَسْوَاسٌ"
+  },
+  {
+    ...nounSpreadObj,
+    base: "خَنَّاسٌ",
+    isOnCanvas: false,
+    english: ["Withdrawer"],
+    position: {
+      x: 0,
+      y: 0
+    },
+    id: "خَنَّاسٌ"
+  },
+  {
+    ...nounSpreadObj,
+    base: "مَلِكٌ",
+    isOnCanvas: false,
+    english: ["Ruler"],
+    position: {
+      x: 0,
+      y: 0
+    },
+    id: "مَلِكٌ"
+  },
+  {
+    ...nounSpreadObj,
+    base: "صُدُورٌ",
+    isOnCanvas: false,
+    english: ["Heart"],
+    position: {
+      x: 0,
+      y: 0
+    },
+    id: "صُدُورٌ"
+  },
+  {
+    ...nounSpreadObj,
+    base: "جِنَّةٌ",
+    isOnCanvas: false,
+    english: ["Jinn"],
+    position: {
+      x: 0,
+      y: 0
+    },
+    id: "جِنَّةٌ"
+  },
+  {
     ...proNounSpreadObj,
     base: "هُوَ",
     isOnCanvas: false,
@@ -387,7 +486,7 @@ export const WORDS_DATA = [
     ...verbSpreadObj,
     base: "ذهب",
     isOnCanvas: false,
-    english: ["Went"],
+    english: ["He went"],
     position: {
       x: 0,
       y: 0
@@ -398,12 +497,45 @@ export const WORDS_DATA = [
     ...verbSpreadObj,
     base: "قرأ",
     isOnCanvas: false,
-    english: ["Read"],
+    english: ["He read"],
     position: {
       x: 0,
       y: 0
     },
     id: "قرأ"
+  },
+  {
+    ...verbSpreadObj,
+    base: "قَوَلَ",
+    isOnCanvas: false,
+    english: ["He said"],
+    position: {
+      x: 0,
+      y: 0
+    },
+    id: "قَوَلَ"
+  },
+  {
+    ...verbSpreadObj,
+    base: "عَوَذَ",
+    isOnCanvas: false,
+    english: ["He sought refuge"],
+    position: {
+      x: 0,
+      y: 0
+    },
+    id: "عَوَذَ"
+  },
+  {
+    ...verbSpreadObj,
+    base: "وَسْوَسَ",
+    isOnCanvas: false,
+    english: ["He whispered"],
+    position: {
+      x: 0,
+      y: 0
+    },
+    id: "وَسْوَسَ"
   }
 ];
 

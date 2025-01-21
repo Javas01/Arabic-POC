@@ -35,7 +35,7 @@ export function mergeWords(
   ];
 }
 
-type Structure = "posessive" | "sentence" | "adjective";
+type Structure = "posessive" | "sentence" | "adjective_indefinite" | "adjective_definite";
 export function getNewWord(
   draggedWord: WordNode,
   droppedWord: WordNode,
@@ -45,7 +45,7 @@ export function getNewWord(
     draggedWord.category === Categories.DEFINITE &&
     droppedWord.category === Categories.NOUN
   ) {
-    return "ال" + " " + droppedWord.base;
+    return "ال" + droppedWord.base; // Removed a space between the definite article and noun
   }
 
   if (
@@ -112,11 +112,13 @@ export function getNewWord(
   )
     switch (structure) {
       case "posessive":
-        return draggedWord.base + "ُ ال" + droppedWord.base + "ِ";
+        return draggedWord.base.replace(/^ال/,"") + " " + "ال" + droppedWord.base.replace(/^ال/,"") + "ِ";
       case "sentence":
-        return "ال" + draggedWord.base + "ُ " + droppedWord.base + "ٌ";
-      case "adjective":
-        return "ال" + draggedWord.base + "ُ " + droppedWord.base + "ُ";
+        return "ال" + draggedWord.base.replace(/^ال/,"") + "ُ " + droppedWord.base.replace(/^ال/,"") + "ٌ";
+      case "adjective_definite":
+        return "ال" + draggedWord.base.replace(/^ال/,"") + "ُ " + "ال" + droppedWord.base.replace(/^ال/,"") + "ُ";
+      case "adjective_indefinite":
+        return draggedWord.base.replace(/^ال/,"") + "ُ " + droppedWord.base.replace(/^ال/,"") + "ُ";  
     }
 
   // default

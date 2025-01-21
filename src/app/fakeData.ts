@@ -440,6 +440,7 @@ export const WORDS_DATA = [
     english: ["For"],
     effects: ["genitive"],
     special: "لَ",
+    attached: true,
     position: {
       x: 0,
       y: 0
@@ -452,6 +453,7 @@ export const WORDS_DATA = [
     isOnCanvas: false,
     english: ["With"],
     effects: ["genitive"],
+    attached: true,
     position: {
       x: 0,
       y: 0

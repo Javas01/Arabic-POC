@@ -6,6 +6,7 @@ export type WordNode = {
   category: Categories;
   hide: boolean;
   parts: WordNode[];
+  attached: boolean;
   isOnCanvas: boolean;
   isDefinite?: boolean;
   forms?: {

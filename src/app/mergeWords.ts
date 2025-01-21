@@ -112,7 +112,7 @@ export function getNewWord(
   )
     switch (structure) {
       case "posessive":
-        return draggedWord.base.replace(/^ال/,"") + " " + "ال" + droppedWord.base.replace(/^ال/,"") + "ِ";
+        return draggedWord.base.replace(/^ال/,"").replace(/ٌ$/,"ُ").replace(/ً$/,"َ").replace(/ٍ$/,"ِ") + " " + "ال" + droppedWord.base.replace(/^ال/,"").replace(/ٌ$/,"").replace(/ً$/,"").replace(/ٍ$/,"").replace(/ُ$/,"").replace(/َ$/,"").replace(/ِ$/,"") + "ِ";
       case "sentence":
         return "ال" + draggedWord.base.replace(/^ال/,"") + "ُ " + droppedWord.base.replace(/^ال/,"") + "ٌ";
       case "adjective_definite":

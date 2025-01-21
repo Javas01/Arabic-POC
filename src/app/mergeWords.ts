@@ -45,7 +45,7 @@ export function getNewWord(
     draggedWord.category === Categories.DEFINITE &&
     droppedWord.category === Categories.NOUN
   ) {
-    return "ال" + droppedWord.base; // Removed a space between the definite article and noun
+    return "ال" + droppedWord.base.replace(/^ال/,"").replace(/ٌ$/,"ُ").replace(/ً$/,"َ").replace(/ٍ$/,"ِ"); // Removed a space between the definite article and noun // added logic for vowel endings
   }
 
   if (

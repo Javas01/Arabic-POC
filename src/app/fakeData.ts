@@ -45,25 +45,25 @@ export const WORDS_DATA = [
   },
   {
     ...nounSpreadObj,
-    base: "كتاب",
+    base: "كتابٌ",
     isOnCanvas: false,
     english: ["Book"],
     position: {
       x: 0,
       y: 0
     },
-    id: "كتاب"
+    id: "كتابٌ"
   },
   {
     ...nounSpreadObj,
-    base: "بيت",
+    base: "بيتٌ",
     isOnCanvas: false,
     english: ["House"],
     position: {
       x: 0,
       y: 0
     },
-    id: "بيت"
+    id: "بيتٌ"
   },
   {
     ...nounSpreadObj,
@@ -78,14 +78,14 @@ export const WORDS_DATA = [
   },
   {
     ...nounSpreadObj,
-    base: "نَّاسٌ",
+    base: "نَاسٌ",
     isOnCanvas: false,
     english: ["Mankind"],
     position: {
       x: 0,
       y: 0
     },
-    id: "نَّاسٌ"
+    id: "نَاسٌ"
   },
   {
     ...nounSpreadObj,

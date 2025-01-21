@@ -64,6 +64,17 @@ export function getNewWord(
 
   if (
     draggedWord.category === Categories.PARTICLE &&
+    droppedWord.category === Categories.NOUN
+  ) {
+    if (draggedWord.attached) {
+      return draggedWord.base + droppedWord.base.replace(/ٌ$/,"").replace(/ً$/,"").replace(/ٍ$/,"").replace(/ُ$/,"").replace(/َ$/,"").replace(/ِ$/,"") + "ِ"
+    } else {
+    return draggedWord.base + " " + droppedWord.base.replace(/ٌ$/,"").replace(/ً$/,"").replace(/ٍ$/,"").replace(/ُ$/,"").replace(/َ$/,"").replace(/ِ$/,"") + "ِ";
+           }
+  }
+
+  if (
+    draggedWord.category === Categories.PARTICLE &&
     droppedWord.category === Categories.PRONOUN
   ) {
     if (!draggedWord.effects) {

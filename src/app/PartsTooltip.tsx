@@ -7,6 +7,7 @@ import {
 import React from "react";
 import WordBlock from "./WordBlock";
 import { WordNode } from "./types";
+import { createId } from "./createId";
 
 type PartsTooltipProps = {
   word: WordNode;
@@ -17,7 +18,7 @@ export const PartsTooltip = ({ word, onRightClick }: PartsTooltipProps) => {
   return (
     <Tooltip key={word.id}>
       <WordBlock
-        id={word.base + Date.now()}
+        id={word.base + createId()}
         word={word}
         onRightClick={onRightClick}
       >

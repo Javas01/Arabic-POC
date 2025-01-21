@@ -62,11 +62,11 @@ const WordBlock = (props: WordBlockProps) => {
           background: color,
           padding: "1rem",
           borderRadius: "0.5rem",
-          fontSize: "1.5rem",
+          fontSize: "2.5rem",
           borderLeft: canConnect ? "5px solid white" : "",
           borderRight: canConnect ? "5px solid white" : "",
           textAlign: "center",
-          minWidth: "100px"
+          minWidth: "150px"
         }}
       >
         {props.children}

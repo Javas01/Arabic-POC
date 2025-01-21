@@ -6,22 +6,31 @@ import { Categories } from "./types";
 import PartsTooltip from "./PartsTooltip";
 import WordBlock from "./WordBlock";
 import dynamic from "next/dynamic";
+import { createId } from "./createId";
 
 const WordCategoryTab = dynamic(() => import("./WordCategoryTab"), {
   ssr: false
 });
 
-const WordTabs = () => {
+const WordTabs = ({
+  setScrollRef
+}: {
+  setScrollRef: (node: HTMLElement | null) => void;
+}) => {
   return (
-    <Tabs defaultValue="noun" className="w-1/5 relative">
-      <TabsList>
+    <Tabs defaultValue="noun" className="relative mr-4 flex flex-col">
+      <TabsList className="text-center">
         <TabsTrigger value="particle">Particles</TabsTrigger>
         <TabsTrigger value="verb">Verbs</TabsTrigger>
         <TabsTrigger value="noun">Nouns</TabsTrigger>
       </TabsList>
       {Object.values(Categories).map((category) => (
         <TabsContent key={category} value={category}>
-          <WordCategoryTab category={category} key={category}>
+          <WordCategoryTab
+            setScrollRef={setScrollRef}
+            category={category}
+            key={category}
+          >
             {WORDS_DATA.filter(
               (word) =>
                 word.category === category ||
@@ -34,7 +43,7 @@ const WordTabs = () => {
                 ) : (
                   <WordBlock
                     word={word}
-                    id={word.base + Date.now()}
+                    id={word.base + createId()}
                     styleOverride={{
                       position: "relative",
                       left: "unset",

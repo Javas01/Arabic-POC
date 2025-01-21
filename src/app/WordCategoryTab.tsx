@@ -1,15 +1,17 @@
 "use client";
 import { TabsContent } from "@/components/ui/tabs";
 import { Categories } from "./types";
-import { useDroppable } from "@dnd-kit/core";
 import React from "react";
+import { useDroppable } from "@dnd-kit/core";
 
 const WordCategoryTab = React.memo(
   ({
     category,
+    setScrollRef,
     children
   }: {
     category: Categories;
+    setScrollRef: (node: HTMLElement | null) => void;
     children: React.ReactNode;
   }) => {
     const { over, setNodeRef } = useDroppable({
@@ -20,11 +22,12 @@ const WordCategoryTab = React.memo(
       <TabsContent
         ref={(node) => {
           setNodeRef(node);
+          setScrollRef(node);
         }}
         value={category}
         style={{
-          height: "calc(90vh - 2rem)",
-          width: "15rem",
+          height: "93vh",
+          width: "20rem",
           overflowY: "auto",
           overflowX: "hidden",
           scrollbarWidth: "none",

@@ -1,6 +1,6 @@
 "use client";
 // import { scan } from "react-scan"; // import this BEFORE react
-import React from "react";
+import React, { useRef } from "react";
 import { Toaster } from "@/components/ui/toaster";
 import { useToast } from "@/hooks/use-toast";
 import { DndContext, DragEndEvent, DragOverlay } from "@dnd-kit/core";
@@ -14,6 +14,7 @@ import WordTabs from "./WordTabs";
 import PartsTooltip from "./PartsTooltip";
 import dynamic from "next/dynamic";
 import EnglishTooltip from "./EnglishTooltip";
+import { createId } from "./createId";
 
 const WordBlock = dynamic(() => import("./WordBlock"), {
   ssr: false
@@ -31,6 +32,7 @@ export default function Home() {
   const { toast } = useToast();
   const [canvasWords, setCanvasWords] = useState<WordNode[]>([]);
   const [popover, setPopover] = useState<Popover | null>(null);
+  const scrollRef = useRef<HTMLElement>(null);
 
   function handleDragEnd(event: DragEndEvent) {
     const { over, active, delta } = event;
@@ -62,15 +64,17 @@ export default function Home() {
         );
       } else {
         if (!activeWord) return;
+        const scrollAdjustedDeltaY =
+          delta.y + (scrollRef.current?.scrollTop ?? 0);
         // Add the dragged word to the canvas
         setCanvasWords((oldWords) =>
           oldWords.concat({
             ...activeWord,
             position: {
               x: activeWord.position.x + delta.x - 400,
-              y: activeWord.position.y + delta.y - 150
+              y: activeWord.position.y + scrollAdjustedDeltaY - 150
             },
-            id: activeWord.base + Date.now(),
+            id: activeWord.base + createId(),
             isOnCanvas: true
           })
         );
@@ -156,7 +160,7 @@ export default function Home() {
         )}
         <DndContext
           onDragStart={({ active, activatorEvent }) => {
-            if ((activatorEvent as MouseEvent).screenX < 200)
+            if ((activatorEvent as MouseEvent).screenX < 250)
               setactiveWord({
                 ...(active.data.current as WordNode),
                 position: {
@@ -167,7 +171,11 @@ export default function Home() {
           }}
           onDragEnd={handleDragEnd}
         >
-          <WordTabs />
+          <WordTabs
+            setScrollRef={(node) => {
+              scrollRef.current = node;
+            }}
+          />
           <Canvas>
             {canvasWords.map((word) => (
               <div key={word.id}>
@@ -185,7 +193,7 @@ export default function Home() {
                                 x: word.position.x + 100 * i,
                                 y: word.position.y
                               },
-                              id: part.base + Date.now() + i, // add i to make the id unique
+                              id: part.base + createId(),
                               isOnCanvas: true
                             }))
                           )

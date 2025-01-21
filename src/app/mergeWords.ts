@@ -1,3 +1,4 @@
+import { createId } from "./createId";
 import { Categories, Category, WordNode } from "./types";
 
 export function mergeWords(
@@ -20,7 +21,7 @@ export function mergeWords(
     ..._words,
     {
       base: customCombinedWord ?? newWord,
-      id: (customCombinedWord ?? newWord) + Date.now(),
+      id: (customCombinedWord ?? newWord) + createId(),
       english: [""], // TODO: Add a way to add the english word
       isOnCanvas: true,
       color: Category.NOUN.color, // TODO: Add a way to add the color
@@ -35,7 +36,11 @@ export function mergeWords(
   ];
 }
 
-type Structure = "posessive" | "sentence" | "adjective_indefinite" | "adjective_definite";
+type Structure =
+  | "posessive"
+  | "sentence"
+  | "adjective_indefinite"
+  | "adjective_definite";
 export function getNewWord(
   draggedWord: WordNode,
   droppedWord: WordNode,
@@ -45,7 +50,14 @@ export function getNewWord(
     draggedWord.category === Categories.DEFINITE &&
     droppedWord.category === Categories.NOUN
   ) {
-    return "ال" + droppedWord.base.replace(/^ال/,"").replace(/ٌ$/,"ُ").replace(/ً$/,"َ").replace(/ٍ$/,"ِ"); // Removed a space between the definite article and noun // added logic for vowel endings
+    return (
+      "ال" +
+      droppedWord.base
+        .replace(/^ال/, "")
+        .replace(/ٌ$/, "ُ")
+        .replace(/ً$/, "َ")
+        .replace(/ٍ$/, "ِ")
+    ); // Removed a space between the definite article and noun // added logic for vowel endings
   }
 
   if (
@@ -67,10 +79,31 @@ export function getNewWord(
     droppedWord.category === Categories.NOUN
   ) {
     if (draggedWord.attached) {
-      return draggedWord.base + droppedWord.base.replace(/ٌ$/,"").replace(/ً$/,"").replace(/ٍ$/,"").replace(/ُ$/,"").replace(/َ$/,"").replace(/ِ$/,"") + "ِ"
+      return (
+        draggedWord.base +
+        droppedWord.base
+          .replace(/ٌ$/, "")
+          .replace(/ً$/, "")
+          .replace(/ٍ$/, "")
+          .replace(/ُ$/, "")
+          .replace(/َ$/, "")
+          .replace(/ِ$/, "") +
+        "ِ"
+      );
     } else {
-    return draggedWord.base + " " + droppedWord.base.replace(/ٌ$/,"").replace(/ً$/,"").replace(/ٍ$/,"").replace(/ُ$/,"").replace(/َ$/,"").replace(/ِ$/,"") + "ِ";
-           }
+      return (
+        draggedWord.base +
+        " " +
+        droppedWord.base
+          .replace(/ٌ$/, "")
+          .replace(/ً$/, "")
+          .replace(/ٍ$/, "")
+          .replace(/ُ$/, "")
+          .replace(/َ$/, "")
+          .replace(/ِ$/, "") +
+        "ِ"
+      );
+    }
   }
 
   if (
@@ -123,13 +156,48 @@ export function getNewWord(
   )
     switch (structure) {
       case "posessive":
-        return draggedWord.base.replace(/^ال/,"").replace(/ٌ$/,"ُ").replace(/ً$/,"َ").replace(/ٍ$/,"ِ") + " " + "ال" + droppedWord.base.replace(/^ال/,"").replace(/ٌ$/,"").replace(/ً$/,"").replace(/ٍ$/,"").replace(/ُ$/,"").replace(/َ$/,"").replace(/ِ$/,"") + "ِ";
+        return (
+          draggedWord.base
+            .replace(/^ال/, "")
+            .replace(/ٌ$/, "ُ")
+            .replace(/ً$/, "َ")
+            .replace(/ٍ$/, "ِ") +
+          " " +
+          "ال" +
+          droppedWord.base
+            .replace(/^ال/, "")
+            .replace(/ٌ$/, "")
+            .replace(/ً$/, "")
+            .replace(/ٍ$/, "")
+            .replace(/ُ$/, "")
+            .replace(/َ$/, "")
+            .replace(/ِ$/, "") +
+          "ِ"
+        );
       case "sentence":
-        return "ال" + draggedWord.base.replace(/^ال/,"") + "ُ " + droppedWord.base.replace(/^ال/,"") + "ٌ";
+        return (
+          "ال" +
+          draggedWord.base.replace(/^ال/, "") +
+          "ُ " +
+          droppedWord.base.replace(/^ال/, "") +
+          "ٌ"
+        );
       case "adjective_definite":
-        return "ال" + draggedWord.base.replace(/^ال/,"") + "ُ " + "ال" + droppedWord.base.replace(/^ال/,"") + "ُ";
+        return (
+          "ال" +
+          draggedWord.base.replace(/^ال/, "") +
+          "ُ " +
+          "ال" +
+          droppedWord.base.replace(/^ال/, "") +
+          "ُ"
+        );
       case "adjective_indefinite":
-        return draggedWord.base.replace(/^ال/,"") + "ُ " + droppedWord.base.replace(/^ال/,"") + "ُ";  
+        return (
+          draggedWord.base.replace(/^ال/, "") +
+          "ُ " +
+          droppedWord.base.replace(/^ال/, "") +
+          "ُ"
+        );
     }
 
   // default

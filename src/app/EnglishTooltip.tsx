@@ -7,6 +7,7 @@ import {
 import React from "react";
 import WordBlock from "./WordBlock";
 import { WordNode } from "./types";
+import { createId } from "./createId";
 
 type EnglishTooltipProps = {
   word: WordNode;
@@ -15,7 +16,7 @@ type EnglishTooltipProps = {
 export const EnglishTooltip = ({ word }: EnglishTooltipProps) => {
   return (
     <Tooltip key={word.id}>
-      <WordBlock id={word.base + Date.now()} word={word}>
+      <WordBlock id={word.base + createId()} word={word}>
         <TooltipTrigger>{word.base}</TooltipTrigger>
       </WordBlock>
       <TooltipContent side="top" align="center" sideOffset={30}>

@@ -20,7 +20,8 @@ const WordBlock = (props: WordBlockProps) => {
     attributes,
     listeners,
     setNodeRef: setDraggableNodeRef,
-    transform
+    transform,
+    active
   } = useDraggable({
     id,
     data: props.word
@@ -30,7 +31,7 @@ const WordBlock = (props: WordBlockProps) => {
     data: props.word
   });
 
-  const canConnect = over && over.id === id;
+  const canConnect = over && over.id === id && id !== active?.id;
   const style = {
     transform: CSS.Translate.toString(transform),
     position: "absolute" as const,

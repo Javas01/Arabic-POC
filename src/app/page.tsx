@@ -13,6 +13,7 @@ import Popover from "./Popover";
 import WordTabs from "./WordTabs";
 import PartsTooltip from "./PartsTooltip";
 import dynamic from "next/dynamic";
+import EnglishTooltip from "./EnglishTooltip";
 
 const WordBlock = dynamic(() => import("./WordBlock"), {
   ssr: false
@@ -192,9 +193,7 @@ export default function Home() {
                     }}
                   />
                 ) : (
-                  <WordBlock word={word} id={word.id}>
-                    {word.base}
-                  </WordBlock>
+                  <EnglishTooltip word={word} />
                 )}
               </div>
             ))}

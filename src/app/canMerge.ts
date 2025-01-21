@@ -16,6 +16,15 @@ export function canMerge(
   if (node1.category === Categories.NOUN && node2.category === Categories.VERB)
     return true; // Noun + Verb
 
+  if (
+    node1.category === Categories.VERB &&
+    node2.category === Categories.PARTICLE
+  )
+    return true; // Verb + Particle
+
+  if (node1.category === Categories.VERB && node2.category === Categories.NOUN)
+    return true; // Verb + Noun
+
   if (node1.category === Categories.NOUN && node2.category === Categories.NOUN)
     return true; // Noun + Noun
 

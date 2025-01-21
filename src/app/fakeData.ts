@@ -35,6 +35,7 @@ export const WORDS_DATA = [
   {
     ...definiteSpreadObj,
     base: "ال",
+    // rootLetters: ["ا", "ل"],
     isOnCanvas: false,
     english: ["The"],
     position: {

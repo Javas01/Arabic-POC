@@ -6,7 +6,10 @@ export type WordNode = {
   category: Categories;
   hide: boolean;
   parts: WordNode[];
-  attached: boolean;
+  /**
+   * The word is always attached on the left.
+   */
+  attached?: boolean;
   isOnCanvas: boolean;
   isDefinite?: boolean;
   forms?: {

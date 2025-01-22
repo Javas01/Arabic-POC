@@ -182,7 +182,7 @@ export function getNewWord(
           "ِ"
         );
         case "possessive_possessive":
-          if (droppedWord.parts.length > 1) {
+          if (droppedWord.parts.length > 1 && droppedWord.parts[1].forms) {
             return (
               draggedWord.base
                 .replace(/^ال/, "")
@@ -200,6 +200,35 @@ export function getNewWord(
                 .replace(/ِ$/, "") +
               "ِ" +
               droppedWord.parts[1].forms?.genitive
+            );
+          } else if (droppedWord.parts.length > 1) {
+            return (
+              draggedWord.base
+                .replace(/^ال/, "")
+                .replace(/ٌ$/, "ُ")
+                .replace(/ً$/, "َ")
+                .replace(/ٍ$/, "ِ") +
+              " " +
+              droppedWord.parts[0].base
+                .replace(/^ال/, "")
+                .replace(/ٌ$/, "")
+                .replace(/ً$/, "")
+                .replace(/ٍ$/, "")
+                .replace(/ُ$/, "")
+                .replace(/َ$/, "")
+                .replace(/ِ$/, "") +
+              "ِ" +
+              " " +
+              "ال" +
+              droppedWord.parts[1].base
+              .replace(/^ال/, "")
+                .replace(/ٌ$/, "")
+                .replace(/ً$/, "")
+                .replace(/ٍ$/, "")
+                .replace(/ُ$/, "")
+                .replace(/َ$/, "")
+                .replace(/ِ$/, "") +
+              "ِ"
             );
           } else {
             console.error("droppedWord.parts does not have enough elements");

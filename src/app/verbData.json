@@ -5,7 +5,7 @@
       "Tense": "Perfect",
       "Voice": "Active",
       "English": "To say",
-      "Doer (Pronoun)": "أنا"
+      "Doer": "أنا"
     },
     {
       "Arabic Verb": "قَالَ",
@@ -13,7 +13,7 @@
       "Tense": "Perfect",
       "Voice": "Active",
       "English": "To say",
-      "Doer (Pronoun)": "هو"
+      "Doer": "هو"
     },
     {
       "Arabic Verb": "قَالَتْ",
@@ -21,7 +21,7 @@
       "Tense": "Perfect",
       "Voice": "Active",
       "English": "To say",
-      "Doer (Pronoun)": "هي"
+      "Doer": "هي"
     },
     {
       "Arabic Verb": "قُلْنَا",
@@ -29,7 +29,7 @@
       "Tense": "Perfect",
       "Voice": "Active",
       "English": "To say",
-      "Doer (Pronoun)": "نحن"
+      "Doer": "نحن"
     },
     {
       "Arabic Verb": "قُلْتُمْ",
@@ -37,7 +37,7 @@
       "Tense": "Perfect",
       "Voice": "Active",
       "English": "To say",
-      "Doer (Pronoun)": "أنتم"
+      "Doer": "أنتم"
     },
     {
       "Arabic Verb": "قَالُوا",
@@ -45,7 +45,7 @@
       "Tense": "Perfect",
       "Voice": "Active",
       "English": "To say",
-      "Doer (Pronoun)": "هم"
+      "Doer": "هم"
     },
     {
       "Arabic Verb": "قِيلَ",
@@ -53,7 +53,7 @@
       "Tense": "Perfect",
       "Voice": "Passive",
       "English": "To say",
-      "Doer (Pronoun)": "هو"
+      "Doer": "هو"
     },
     {
       "Arabic Verb": "قِيلَتْ",
@@ -61,7 +61,7 @@
       "Tense": "Perfect",
       "Voice": "Passive",
       "English": "To say",
-      "Doer (Pronoun)": "هي"
+      "Doer": "هي"
     },
     {
       "Arabic Verb": "قِيلْتُ",
@@ -69,7 +69,7 @@
       "Tense": "Perfect",
       "Voice": "Passive",
       "English": "To say",
-      "Doer (Pronoun)": "أنا"
+      "Doer": "أنا"
     },
     {
       "Arabic Verb": "قِيلْنَا",
@@ -77,7 +77,7 @@
       "Tense": "Perfect",
       "Voice": "Passive",
       "English": "To say",
-      "Doer (Pronoun)": "نحن"
+      "Doer": "نحن"
     },
     {
       "Arabic Verb": "يَقُولُ",
@@ -85,7 +85,7 @@
       "Tense": "Imperfect",
       "Voice": "Active",
       "English": "To say",
-      "Doer (Pronoun)": "هو"
+      "Doer": "هو"
     },
     {
       "Arabic Verb": "تَقُولُ",
@@ -93,7 +93,7 @@
       "Tense": "Imperfect",
       "Voice": "Active",
       "English": "To say",
-      "Doer (Pronoun)": "هي"
+      "Doer": "هي"
     },
     {
       "Arabic Verb": "أَقُولُ",
@@ -101,7 +101,7 @@
       "Tense": "Imperfect",
       "Voice": "Active",
       "English": "To say",
-      "Doer (Pronoun)": "أنا"
+      "Doer": "أنا"
     },
     {
       "Arabic Verb": "نَقُولُ",
@@ -109,7 +109,7 @@
       "Tense": "Imperfect",
       "Voice": "Active",
       "English": "To say",
-      "Doer (Pronoun)": "نحن"
+      "Doer": "نحن"
     },
     {
       "Arabic Verb": "تَقُولُونَ",
@@ -117,7 +117,7 @@
       "Tense": "Imperfect",
       "Voice": "Active",
       "English": "To say",
-      "Doer (Pronoun)": "أنتم"
+      "Doer": "أنتم"
     },
     {
       "Arabic Verb": "يَقُولُونَ",
@@ -125,7 +125,7 @@
       "Tense": "Imperfect",
       "Voice": "Active",
       "English": "To say",
-      "Doer (Pronoun)": "هم"
+      "Doer": "هم"
     },
     {
       "Arabic Verb": "يُقَالُ",
@@ -133,7 +133,7 @@
       "Tense": "Imperfect",
       "Voice": "Passive",
       "English": "To say",
-      "Doer (Pronoun)": "هو"
+      "Doer": "هو"
     },
     {
       "Arabic Verb": "تُقَالُ",
@@ -141,7 +141,7 @@
       "Tense": "Imperfect",
       "Voice": "Passive",
       "English": "To say",
-      "Doer (Pronoun)": "هي"
+      "Doer": "هي"
     },
     {
       "Arabic Verb": "تُقُولْتُ",
@@ -149,7 +149,7 @@
       "Tense": "Imperfect",
       "Voice": "Passive",
       "English": "To say",
-      "Doer (Pronoun)": "أنا"
+      "Doer": "أنا"
     },
     {
       "Arabic Verb": "نُقَالُ",
@@ -157,7 +157,7 @@
       "Tense": "Imperfect",
       "Voice": "Passive",
       "English": "To say",
-      "Doer (Pronoun)": "نحن"
+      "Doer": "نحن"
     },
     {
       "Arabic Verb": "تَقُولُونَ",
@@ -165,7 +165,7 @@
       "Tense": "Imperfect",
       "Voice": "Passive",
       "English": "To say",
-      "Doer (Pronoun)": "أنتم"
+      "Doer": "أنتم"
     },
     {
       "Arabic Verb": "يَقُولُونَ",
@@ -173,7 +173,7 @@
       "Tense": "Imperfect",
       "Voice": "Passive",
       "English": "To say",
-      "Doer (Pronoun)": "هم"
+      "Doer": "هم"
     },
     {
       "Arabic Verb": "قُلْ",
@@ -181,7 +181,7 @@
       "Tense": "Command",
       "Voice": "Active",
       "English": "To say",
-      "Doer (Pronoun)": "أنت"
+      "Doer": "أنت"
     },
     {
       "Arabic Verb": "قُولِي",
@@ -189,7 +189,7 @@
       "Tense": "Command",
       "Voice": "Active",
       "English": "To say",
-      "Doer (Pronoun)": "أنتِ"
+      "Doer": "أنتِ"
     },
     {
       "Arabic Verb": "قُولَا",
@@ -197,7 +197,7 @@
       "Tense": "Command",
       "Voice": "Active",
       "English": "To say",
-      "Doer (Pronoun)": "أنتما"
+      "Doer": "أنتما"
     },
     {
       "Arabic Verb": "قُولُوا",
@@ -205,7 +205,7 @@
       "Tense": "Command",
       "Voice": "Active",
       "English": "To say",
-      "Doer (Pronoun)": "أنتم"
+      "Doer": "أنتم"
     },
     {
       "Arabic Verb": "قُلْنَا",
@@ -213,7 +213,7 @@
       "Tense": "Command",
       "Voice": "Active",
       "English": "To say",
-      "Doer (Pronoun)": "نحن"
+      "Doer": "نحن"
     },
     {
       "Arabic Verb": "قُلتُ",
@@ -221,7 +221,7 @@
       "Tense": "Perfect",
       "Voice": "Active",
       "English": "To say",
-      "Doer (Pronoun)": "أنا"
+      "Doer": "أنا"
     },
     {
       "Arabic Verb": "قَالَ",
@@ -229,7 +229,7 @@
       "Tense": "Perfect",
       "Voice": "Active",
       "English": "To say",
-      "Doer (Pronoun)": "هو"
+      "Doer": "هو"
     },
     {
       "Arabic Verb": "قَالَتْ",
@@ -237,7 +237,7 @@
       "Tense": "Perfect",
       "Voice": "Active",
       "English": "To say",
-      "Doer (Pronoun)": "هي"
+      "Doer": "هي"
     },
     {
       "Arabic Verb": "قُلْنَا",
@@ -245,7 +245,7 @@
       "Tense": "Perfect",
       "Voice": "Active",
       "English": "To say",
-      "Doer (Pronoun)": "نحن"
+      "Doer": "نحن"
     },
     {
       "Arabic Verb": "قُلْتُمْ",
@@ -253,7 +253,7 @@
       "Tense": "Perfect",
       "Voice": "Active",
       "English": "To say",
-      "Doer (Pronoun)": "أنتم"
+      "Doer": "أنتم"
     },
     {
       "Arabic Verb": "قَالُوا",
@@ -261,7 +261,7 @@
       "Tense": "Perfect",
       "Voice": "Active",
       "English": "To say",
-      "Doer (Pronoun)": "هم"
+      "Doer": "هم"
     },
     {
       "Arabic Verb": "قِيلَ",
@@ -269,7 +269,7 @@
       "Tense": "Perfect",
       "Voice": "Passive",
       "English": "To say",
-      "Doer (Pronoun)": "هو"
+      "Doer": "هو"
     },
     {
       "Arabic Verb": "قِيلَتْ",
@@ -277,7 +277,7 @@
       "Tense": "Perfect",
       "Voice": "Passive",
       "English": "To say",
-      "Doer (Pronoun)": "هي"
+      "Doer": "هي"
     },
     {
       "Arabic Verb": "قِيلْتُ",
@@ -285,7 +285,7 @@
       "Tense": "Perfect",
       "Voice": "Passive",
       "English": "To say",
-      "Doer (Pronoun)": "أنا"
+      "Doer": "أنا"
     },
     {
       "Arabic Verb": "قِيلْنَا",
@@ -293,7 +293,7 @@
       "Tense": "Perfect",
       "Voice": "Passive",
       "English": "To say",
-      "Doer (Pronoun)": "نحن"
+      "Doer": "نحن"
     },
     {
       "Arabic Verb": "يَقُولُ",
@@ -301,7 +301,7 @@
       "Tense": "Imperfect",
       "Voice": "Active",
       "English": "To say",
-      "Doer (Pronoun)": "هو"
+      "Doer": "هو"
     },
     {
       "Arabic Verb": "تَقُولُ",
@@ -309,7 +309,7 @@
       "Tense": "Imperfect",
       "Voice": "Active",
       "English": "To say",
-      "Doer (Pronoun)": "هي"
+      "Doer": "هي"
     },
     {
       "Arabic Verb": "أَقُولُ",
@@ -317,7 +317,7 @@
       "Tense": "Imperfect",
       "Voice": "Active",
       "English": "To say",
-      "Doer (Pronoun)": "أنا"
+      "Doer": "أنا"
     },
     {
       "Arabic Verb": "نَقُولُ",
@@ -325,7 +325,7 @@
       "Tense": "Imperfect",
       "Voice": "Active",
       "English": "To say",
-      "Doer (Pronoun)": "نحن"
+      "Doer": "نحن"
     },
     {
       "Arabic Verb": "تَقُولُونَ",
@@ -333,7 +333,7 @@
       "Tense": "Imperfect",
       "Voice": "Active",
       "English": "To say",
-      "Doer (Pronoun)": "أنتم"
+      "Doer": "أنتم"
     },
     {
       "Arabic Verb": "يَقُولُونَ",
@@ -341,7 +341,7 @@
       "Tense": "Imperfect",
       "Voice": "Active",
       "English": "To say",
-      "Doer (Pronoun)": "هم"
+      "Doer": "هم"
     },
     {
       "Arabic Verb": "يُقَالُ",
@@ -349,7 +349,7 @@
       "Tense": "Imperfect",
       "Voice": "Passive",
       "English": "To say",
-      "Doer (Pronoun)": "هو"
+      "Doer": "هو"
     },
     {
       "Arabic Verb": "تُقَالُ",
@@ -357,7 +357,7 @@
       "Tense": "Imperfect",
       "Voice": "Passive",
       "English": "To say",
-      "Doer (Pronoun)": "هي"
+      "Doer": "هي"
     },
     {
       "Arabic Verb": "تُقُولْتُ",
@@ -365,7 +365,7 @@
       "Tense": "Imperfect",
       "Voice": "Passive",
       "English": "To say",
-      "Doer (Pronoun)": "أنا"
+      "Doer": "أنا"
     },
     {
       "Arabic Verb": "نُقَالُ",
@@ -373,7 +373,7 @@
       "Tense": "Imperfect",
       "Voice": "Passive",
       "English": "To say",
-      "Doer (Pronoun)": "نحن"
+      "Doer": "نحن"
     },
     {
       "Arabic Verb": "تَقُولُونَ",
@@ -381,7 +381,7 @@
       "Tense": "Imperfect",
       "Voice": "Passive",
       "English": "To say",
-      "Doer (Pronoun)": "أنتم"
+      "Doer": "أنتم"
     },
     {
       "Arabic Verb": "يَقُولُونَ",
@@ -389,7 +389,7 @@
       "Tense": "Imperfect",
       "Voice": "Passive",
       "English": "To say",
-      "Doer (Pronoun)": "هم"
+      "Doer": "هم"
     },
     {
       "Arabic Verb": "قُلْ",
@@ -397,7 +397,7 @@
       "Tense": "Command",
       "Voice": "Active",
       "English": "To say",
-      "Doer (Pronoun)": "أنت"
+      "Doer": "أنت"
     },
     {
       "Arabic Verb": "قُولِي",
@@ -405,7 +405,7 @@
       "Tense": "Command",
       "Voice": "Active",
       "English": "To say",
-      "Doer (Pronoun)": "أنتِ"
+      "Doer": "أنتِ"
     },
     {
       "Arabic Verb": "قُولَا",
@@ -413,7 +413,7 @@
       "Tense": "Command",
       "Voice": "Active",
       "English": "To say",
-      "Doer (Pronoun)": "أنتما"
+      "Doer": "أنتما"
     },
     {
       "Arabic Verb": "قُولُوا",
@@ -421,7 +421,7 @@
       "Tense": "Command",
       "Voice": "Active",
       "English": "To say",
-      "Doer (Pronoun)": "أنتم"
+      "Doer": "أنتم"
     },
     {
       "Arabic Verb": "قُلْنَا",
@@ -429,7 +429,7 @@
       "Tense": "Command",
       "Voice": "Active",
       "English": "To say",
-      "Doer (Pronoun)": "نحن"
+      "Doer": "نحن"
     },
     {
       "Arabic Verb": "قُلتُ",
@@ -437,7 +437,7 @@
       "Tense": "Perfect",
       "Voice": "Active",
       "English": "To say",
-      "Doer (Pronoun)": "أنا"
+      "Doer": "أنا"
     },
     {
       "Arabic Verb": "قَالَ",
@@ -445,7 +445,7 @@
       "Tense": "Perfect",
       "Voice": "Active",
       "English": "To say",
-      "Doer (Pronoun)": "هو"
+      "Doer": "هو"
     },
     {
       "Arabic Verb": "قَالَتْ",
@@ -453,7 +453,7 @@
       "Tense": "Perfect",
       "Voice": "Active",
       "English": "To say",
-      "Doer (Pronoun)": "هي"
+      "Doer": "هي"
     },
     {
       "Arabic Verb": "قُلْنَا",
@@ -461,7 +461,7 @@
       "Tense": "Perfect",
       "Voice": "Active",
       "English": "To say",
-      "Doer (Pronoun)": "نحن"
+      "Doer": "نحن"
     },
     {
       "Arabic Verb": "قُلْتُمْ",
@@ -469,7 +469,7 @@
       "Tense": "Perfect",
       "Voice": "Active",
       "English": "To say",
-      "Doer (Pronoun)": "أنتم"
+      "Doer": "أنتم"
     },
     {
       "Arabic Verb": "قَالُوا",
@@ -477,7 +477,7 @@
       "Tense": "Perfect",
       "Voice": "Active",
       "English": "To say",
-      "Doer (Pronoun)": "هم"
+      "Doer": "هم"
     },
     {
       "Arabic Verb": "قِيلَ",
@@ -485,7 +485,7 @@
       "Tense": "Perfect",
       "Voice": "Passive",
       "English": "To say",
-      "Doer (Pronoun)": "هو"
+      "Doer": "هو"
     },
     {
       "Arabic Verb": "قِيلَتْ",
@@ -493,7 +493,7 @@
       "Tense": "Perfect",
       "Voice": "Passive",
       "English": "To say",
-      "Doer (Pronoun)": "هي"
+      "Doer": "هي"
     },
     {
       "Arabic Verb": "قِيلْتُ",
@@ -501,7 +501,7 @@
       "Tense": "Perfect",
       "Voice": "Passive",
       "English": "To say",
-      "Doer (Pronoun)": "أنا"
+      "Doer": "أنا"
     },
     {
       "Arabic Verb": "قِيلْنَا",
@@ -509,7 +509,7 @@
       "Tense": "Perfect",
       "Voice": "Passive",
       "English": "To say",
-      "Doer (Pronoun)": "نحن"
+      "Doer": "نحن"
     },
     {
       "Arabic Verb": "يَقُولُ",
@@ -517,7 +517,7 @@
       "Tense": "Imperfect",
       "Voice": "Active",
       "English": "To say",
-      "Doer (Pronoun)": "هو"
+      "Doer": "هو"
     },
     {
       "Arabic Verb": "تَقُولُ",
@@ -525,7 +525,7 @@
       "Tense": "Imperfect",
       "Voice": "Active",
       "English": "To say",
-      "Doer (Pronoun)": "هي"
+      "Doer": "هي"
     },
     {
       "Arabic Verb": "أَقُولُ",
@@ -533,7 +533,7 @@
       "Tense": "Imperfect",
       "Voice": "Active",
       "English": "To say",
-      "Doer (Pronoun)": "أنا"
+      "Doer": "أنا"
     },
     {
       "Arabic Verb": "نَقُولُ",
@@ -541,7 +541,7 @@
       "Tense": "Imperfect",
       "Voice": "Active",
       "English": "To say",
-      "Doer (Pronoun)": "نحن"
+      "Doer": "نحن"
     },
     {
       "Arabic Verb": "تَقُولُونَ",
@@ -549,7 +549,7 @@
       "Tense": "Imperfect",
       "Voice": "Active",
       "English": "To say",
-      "Doer (Pronoun)": "أنتم"
+      "Doer": "أنتم"
     },
     {
       "Arabic Verb": "يَقُولُونَ",
@@ -557,7 +557,7 @@
       "Tense": "Imperfect",
       "Voice": "Active",
       "English": "To say",
-      "Doer (Pronoun)": "هم"
+      "Doer": "هم"
     },
     {
       "Arabic Verb": "يُقَالُ",
@@ -565,7 +565,7 @@
       "Tense": "Imperfect",
       "Voice": "Passive",
       "English": "To say",
-      "Doer (Pronoun)": "هو"
+      "Doer": "هو"
     },
     {
       "Arabic Verb": "تُقَالُ",
@@ -573,7 +573,7 @@
       "Tense": "Imperfect",
       "Voice": "Passive",
       "English": "To say",
-      "Doer (Pronoun)": "هي"
+      "Doer": "هي"
     },
     {
       "Arabic Verb": "تُقُولْتُ",
@@ -581,7 +581,7 @@
       "Tense": "Imperfect",
       "Voice": "Passive",
       "English": "To say",
-      "Doer (Pronoun)": "أنا"
+      "Doer": "أنا"
     },
     {
       "Arabic Verb": "نُقَالُ",
@@ -589,7 +589,7 @@
       "Tense": "Imperfect",
       "Voice": "Passive",
       "English": "To say",
-      "Doer (Pronoun)": "نحن"
+      "Doer": "نحن"
     },
     {
       "Arabic Verb": "تَقُولُونَ",
@@ -597,7 +597,7 @@
       "Tense": "Imperfect",
       "Voice": "Passive",
       "English": "To say",
-      "Doer (Pronoun)": "أنتم"
+      "Doer": "أنتم"
     },
     {
       "Arabic Verb": "يَقُولُونَ",
@@ -605,7 +605,7 @@
       "Tense": "Imperfect",
       "Voice": "Passive",
       "English": "To say",
-      "Doer (Pronoun)": "هم"
+      "Doer": "هم"
     },
     {
       "Arabic Verb": "قُلْ",
@@ -613,7 +613,7 @@
       "Tense": "Command",
       "Voice": "Active",
       "English": "To say",
-      "Doer (Pronoun)": "أنت"
+      "Doer": "أنت"
     },
     {
       "Arabic Verb": "قُولِي",
@@ -621,7 +621,7 @@
       "Tense": "Command",
       "Voice": "Active",
       "English": "To say",
-      "Doer (Pronoun)": "أنتِ"
+      "Doer": "أنتِ"
     },
     {
       "Arabic Verb": "قُولَا",
@@ -629,7 +629,7 @@
       "Tense": "Command",
       "Voice": "Active",
       "English": "To say",
-      "Doer (Pronoun)": "أنتما"
+      "Doer": "أنتما"
     },
     {
       "Arabic Verb": "قُولُوا",
@@ -637,7 +637,7 @@
       "Tense": "Command",
       "Voice": "Active",
       "English": "To say",
-      "Doer (Pronoun)": "أنتم"
+      "Doer": "أنتم"
     },
     {
       "Arabic Verb": "قُلْنَا",
@@ -645,7 +645,7 @@
       "Tense": "Command",
       "Voice": "Active",
       "English": "To say",
-      "Doer (Pronoun)": "نحن"
+      "Doer": "نحن"
     },
     {
       "Arabic Verb": "قُلتُ",
@@ -653,7 +653,7 @@
       "Tense": "Perfect",
       "Voice": "Active",
       "English": "To say",
-      "Doer (Pronoun)": "أنا"
+      "Doer": "أنا"
     },
     {
       "Arabic Verb": "قَالَ",
@@ -661,7 +661,7 @@
       "Tense": "Perfect",
       "Voice": "Active",
       "English": "To say",
-      "Doer (Pronoun)": "هو"
+      "Doer": "هو"
     },
     {
       "Arabic Verb": "قَالَتْ",
@@ -669,7 +669,7 @@
       "Tense": "Perfect",
       "Voice": "Active",
       "English": "To say",
-      "Doer (Pronoun)": "هي"
+      "Doer": "هي"
     },
     {
       "Arabic Verb": "قُلْنَا",
@@ -677,7 +677,7 @@
       "Tense": "Perfect",
       "Voice": "Active",
       "English": "To say",
-      "Doer (Pronoun)": "نحن"
+      "Doer": "نحن"
     },
     {
       "Arabic Verb": "قُلْتُمْ",
@@ -685,7 +685,7 @@
       "Tense": "Perfect",
       "Voice": "Active",
       "English": "To say",
-      "Doer (Pronoun)": "أنتم"
+      "Doer": "أنتم"
     },
     {
       "Arabic Verb": "قَالُوا",
@@ -693,7 +693,7 @@
       "Tense": "Perfect",
       "Voice": "Active",
       "English": "To say",
-      "Doer (Pronoun)": "هم"
+      "Doer": "هم"
     },
     {
       "Arabic Verb": "قِيلَ",
@@ -701,7 +701,7 @@
       "Tense": "Perfect",
       "Voice": "Passive",
       "English": "To say",
-      "Doer (Pronoun)": "هو"
+      "Doer": "هو"
     },
     {
       "Arabic Verb": "قِيلَتْ",
@@ -709,7 +709,7 @@
       "Tense": "Perfect",
       "Voice": "Passive",
       "English": "To say",
-      "Doer (Pronoun)": "هي"
+      "Doer": "هي"
     },
     {
       "Arabic Verb": "قِيلْتُ",
@@ -717,7 +717,7 @@
       "Tense": "Perfect",
       "Voice": "Passive",
       "English": "To say",
-      "Doer (Pronoun)": "أنا"
+      "Doer": "أنا"
     },
     {
       "Arabic Verb": "قِيلْنَا",
@@ -725,7 +725,7 @@
       "Tense": "Perfect",
       "Voice": "Passive",
       "English": "To say",
-      "Doer (Pronoun)": "نحن"
+      "Doer": "نحن"
     },
     {
       "Arabic Verb": "يَقُولُ",
@@ -733,7 +733,7 @@
       "Tense": "Imperfect",
       "Voice": "Active",
       "English": "To say",
-      "Doer (Pronoun)": "هو"
+      "Doer": "هو"
     },
     {
       "Arabic Verb": "تَقُولُ",
@@ -741,7 +741,7 @@
       "Tense": "Imperfect",
       "Voice": "Active",
       "English": "To say",
-      "Doer (Pronoun)": "هي"
+      "Doer": "هي"
     },
     {
       "Arabic Verb": "أَقُولُ",
@@ -749,7 +749,7 @@
       "Tense": "Imperfect",
       "Voice": "Active",
       "English": "To say",
-      "Doer (Pronoun)": "أنا"
+      "Doer": "أنا"
     },
     {
       "Arabic Verb": "نَقُولُ",
@@ -757,7 +757,7 @@
       "Tense": "Imperfect",
       "Voice": "Active",
       "English": "To say",
-      "Doer (Pronoun)": "نحن"
+      "Doer": "نحن"
     },
     {
       "Arabic Verb": "تَقُولُونَ",
@@ -765,7 +765,7 @@
       "Tense": "Imperfect",
       "Voice": "Active",
       "English": "To say",
-      "Doer (Pronoun)": "أنتم"
+      "Doer": "أنتم"
     },
     {
       "Arabic Verb": "يَقُولُونَ",
@@ -773,7 +773,7 @@
       "Tense": "Imperfect",
       "Voice": "Active",
       "English": "To say",
-      "Doer (Pronoun)": "هم"
+      "Doer": "هم"
     },
     {
       "Arabic Verb": "يُقَالُ",
@@ -781,7 +781,7 @@
       "Tense": "Imperfect",
       "Voice": "Passive",
       "English": "To say",
-      "Doer (Pronoun)": "هو"
+      "Doer": "هو"
     },
     {
       "Arabic Verb": "تُقَالُ",
@@ -789,7 +789,7 @@
       "Tense": "Imperfect",
       "Voice": "Passive",
       "English": "To say",
-      "Doer (Pronoun)": "هي"
+      "Doer": "هي"
     },
     {
       "Arabic Verb": "تُقُولْتُ",
@@ -797,7 +797,7 @@
       "Tense": "Imperfect",
       "Voice": "Passive",
       "English": "To say",
-      "Doer (Pronoun)": "أنا"
+      "Doer": "أنا"
     },
     {
       "Arabic Verb": "نُقَالُ",
@@ -805,7 +805,7 @@
       "Tense": "Imperfect",
       "Voice": "Passive",
       "English": "To say",
-      "Doer (Pronoun)": "نحن"
+      "Doer": "نحن"
     },
     {
       "Arabic Verb": "تَقُولُونَ",
@@ -813,7 +813,7 @@
       "Tense": "Imperfect",
       "Voice": "Passive",
       "English": "To say",
-      "Doer (Pronoun)": "أنتم"
+      "Doer": "أنتم"
     },
     {
       "Arabic Verb": "يَقُولُونَ",
@@ -821,7 +821,7 @@
       "Tense": "Imperfect",
       "Voice": "Passive",
       "English": "To say",
-      "Doer (Pronoun)": "هم"
+      "Doer": "هم"
     },
     {
       "Arabic Verb": "قُلْ",
@@ -829,7 +829,7 @@
       "Tense": "Command",
       "Voice": "Active",
       "English": "To say",
-      "Doer (Pronoun)": "أنت"
+      "Doer": "أنت"
     },
     {
       "Arabic Verb": "قُولِي",
@@ -837,7 +837,7 @@
       "Tense": "Command",
       "Voice": "Active",
       "English": "To say",
-      "Doer (Pronoun)": "أنتِ"
+      "Doer": "أنتِ"
     },
     {
       "Arabic Verb": "قُولَا",
@@ -845,7 +845,7 @@
       "Tense": "Command",
       "Voice": "Active",
       "English": "To say",
-      "Doer (Pronoun)": "أنتما"
+      "Doer": "أنتما"
     },
     {
       "Arabic Verb": "قُولُوا",
@@ -853,7 +853,7 @@
       "Tense": "Command",
       "Voice": "Active",
       "English": "To say",
-      "Doer (Pronoun)": "أنتم"
+      "Doer": "أنتم"
     },
     {
       "Arabic Verb": "قُلْنَا",
@@ -861,7 +861,7 @@
       "Tense": "Command",
       "Voice": "Active",
       "English": "To say",
-      "Doer (Pronoun)": "نحن"
+      "Doer": "نحن"
     },
     {
       "Arabic Verb": "قُلتُ",
@@ -869,7 +869,7 @@
       "Tense": "Perfect",
       "Voice": "Active",
       "English": "To say",
-      "Doer (Pronoun)": "أنا"
+      "Doer": "أنا"
     },
     {
       "Arabic Verb": "قَالَ",
@@ -877,7 +877,7 @@
       "Tense": "Perfect",
       "Voice": "Active",
       "English": "To say",
-      "Doer (Pronoun)": "هو"
+      "Doer": "هو"
     },
     {
       "Arabic Verb": "قَالَتْ",
@@ -885,7 +885,7 @@
       "Tense": "Perfect",
       "Voice": "Active",
       "English": "To say",
-      "Doer (Pronoun)": "هي"
+      "Doer": "هي"
     },
     {
       "Arabic Verb": "قُلْنَا",
@@ -893,7 +893,7 @@
       "Tense": "Perfect",
       "Voice": "Active",
       "English": "To say",
-      "Doer (Pronoun)": "نحن"
+      "Doer": "نحن"
     },
     {
       "Arabic Verb": "قُلْتُمْ",
@@ -901,7 +901,7 @@
       "Tense": "Perfect",
       "Voice": "Active",
       "English": "To say",
-      "Doer (Pronoun)": "أنتم"
+      "Doer": "أنتم"
     },
     {
       "Arabic Verb": "قَالُوا",
@@ -909,7 +909,7 @@
       "Tense": "Perfect",
       "Voice": "Active",
       "English": "To say",
-      "Doer (Pronoun)": "هم"
+      "Doer": "هم"
     },
     {
       "Arabic Verb": "قِيلَ",
@@ -917,7 +917,7 @@
       "Tense": "Perfect",
       "Voice": "Passive",
       "English": "To say",
-      "Doer (Pronoun)": "هو"
+      "Doer": "هو"
     },
     {
       "Arabic Verb": "قِيلَتْ",
@@ -925,7 +925,7 @@
       "Tense": "Perfect",
       "Voice": "Passive",
       "English": "To say",
-      "Doer (Pronoun)": "هي"
+      "Doer": "هي"
     },
     {
       "Arabic Verb": "قِيلْتُ",
@@ -933,7 +933,7 @@
       "Tense": "Perfect",
       "Voice": "Passive",
       "English": "To say",
-      "Doer (Pronoun)": "أنا"
+      "Doer": "أنا"
     },
     {
       "Arabic Verb": "قِيلْنَا",
@@ -941,7 +941,7 @@
       "Tense": "Perfect",
       "Voice": "Passive",
       "English": "To say",
-      "Doer (Pronoun)": "نحن"
+      "Doer": "نحن"
     },
     {
       "Arabic Verb": "يَقُولُ",
@@ -949,7 +949,7 @@
       "Tense": "Imperfect",
       "Voice": "Active",
       "English": "To say",
-      "Doer (Pronoun)": "هو"
+      "Doer": "هو"
     },
     {
       "Arabic Verb": "تَقُولُ",
@@ -957,7 +957,7 @@
       "Tense": "Imperfect",
       "Voice": "Active",
       "English": "To say",
-      "Doer (Pronoun)": "هي"
+      "Doer": "هي"
     },
     {
       "Arabic Verb": "أَقُولُ",
@@ -965,7 +965,7 @@
       "Tense": "Imperfect",
       "Voice": "Active",
       "English": "To say",
-      "Doer (Pronoun)": "أنا"
+      "Doer": "أنا"
     },
     {
       "Arabic Verb": "نَقُولُ",
@@ -973,7 +973,7 @@
       "Tense": "Imperfect",
       "Voice": "Active",
       "English": "To say",
-      "Doer (Pronoun)": "نحن"
+      "Doer": "نحن"
     },
     {
       "Arabic Verb": "تَقُولُونَ",
@@ -981,7 +981,7 @@
       "Tense": "Imperfect",
       "Voice": "Active",
       "English": "To say",
-      "Doer (Pronoun)": "أنتم"
+      "Doer": "أنتم"
     },
     {
       "Arabic Verb": "يَقُولُونَ",
@@ -989,7 +989,7 @@
       "Tense": "Imperfect",
       "Voice": "Active",
       "English": "To say",
-      "Doer (Pronoun)": "هم"
+      "Doer": "هم"
     },
     {
       "Arabic Verb": "يُقَالُ",
@@ -997,7 +997,7 @@
       "Tense": "Imperfect",
       "Voice": "Passive",
       "English": "To say",
-      "Doer (Pronoun)": "هو"
+      "Doer": "هو"
     },
     {
       "Arabic Verb": "تُقَالُ",
@@ -1005,7 +1005,7 @@
       "Tense": "Imperfect",
       "Voice": "Passive",
       "English": "To say",
-      "Doer (Pronoun)": "هي"
+      "Doer": "هي"
     },
     {
       "Arabic Verb": "تُقُولْتُ",
@@ -1013,7 +1013,7 @@
       "Tense": "Imperfect",
       "Voice": "Passive",
       "English": "To say",
-      "Doer (Pronoun)": "أنا"
+      "Doer": "أنا"
     },
     {
       "Arabic Verb": "نُقَالُ",
@@ -1021,7 +1021,7 @@
       "Tense": "Imperfect",
       "Voice": "Passive",
       "English": "To say",
-      "Doer (Pronoun)": "نحن"
+      "Doer": "نحن"
     },
     {
       "Arabic Verb": "تَقُولُونَ",
@@ -1029,7 +1029,7 @@
       "Tense": "Imperfect",
       "Voice": "Passive",
       "English": "To say",
-      "Doer (Pronoun)": "أنتم"
+      "Doer": "أنتم"
     },
     {
       "Arabic Verb": "يَقُولُونَ",
@@ -1037,7 +1037,7 @@
       "Tense": "Imperfect",
       "Voice": "Passive",
       "English": "To say",
-      "Doer (Pronoun)": "هم"
+      "Doer": "هم"
     },
     {
       "Arabic Verb": "قُلْ",
@@ -1045,7 +1045,7 @@
       "Tense": "Command",
       "Voice": "Active",
       "English": "To say",
-      "Doer (Pronoun)": "أنت"
+      "Doer": "أنت"
     },
     {
       "Arabic Verb": "قُولِي",
@@ -1053,7 +1053,7 @@
       "Tense": "Command",
       "Voice": "Active",
       "English": "To say",
-      "Doer (Pronoun)": "أنتِ"
+      "Doer": "أنتِ"
     },
     {
       "Arabic Verb": "قُولَا",
@@ -1061,7 +1061,7 @@
       "Tense": "Command",
       "Voice": "Active",
       "English": "To say",
-      "Doer (Pronoun)": "أنتما"
+      "Doer": "أنتما"
     },
     {
       "Arabic Verb": "قُولُوا",
@@ -1069,7 +1069,7 @@
       "Tense": "Command",
       "Voice": "Active",
       "English": "To say",
-      "Doer (Pronoun)": "أنتم"
+      "Doer": "أنتم"
     },
     {
       "Arabic Verb": "قُلْنَا",
@@ -1077,7 +1077,7 @@
       "Tense": "Command",
       "Voice": "Active",
       "English": "To say",
-      "Doer (Pronoun)": "نحن"
+      "Doer": "نحن"
     },
     {
       "Arabic Verb": "قُلتُ",
@@ -1085,7 +1085,7 @@
       "Tense": "Perfect",
       "Voice": "Active",
       "English": "To say",
-      "Doer (Pronoun)": "أنا"
+      "Doer": "أنا"
     },
     {
       "Arabic Verb": "قَالَ",
@@ -1093,7 +1093,7 @@
       "Tense": "Perfect",
       "Voice": "Active",
       "English": "To say",
-      "Doer (Pronoun)": "هو"
+      "Doer": "هو"
     },
     {
       "Arabic Verb": "قَالَتْ",
@@ -1101,7 +1101,7 @@
       "Tense": "Perfect",
       "Voice": "Active",
       "English": "To say",
-      "Doer (Pronoun)": "هي"
+      "Doer": "هي"
     },
     {
       "Arabic Verb": "قُلْنَا",
@@ -1109,7 +1109,7 @@
       "Tense": "Perfect",
       "Voice": "Active",
       "English": "To say",
-      "Doer (Pronoun)": "نحن"
+      "Doer": "نحن"
     },
     {
       "Arabic Verb": "قُلْتُمْ",
@@ -1117,7 +1117,7 @@
       "Tense": "Perfect",
       "Voice": "Active",
       "English": "To say",
-      "Doer (Pronoun)": "أنتم"
+      "Doer": "أنتم"
     },
     {
       "Arabic Verb": "قَالُوا",
@@ -1125,7 +1125,7 @@
       "Tense": "Perfect",
       "Voice": "Active",
       "English": "To say",
-      "Doer (Pronoun)": "هم"
+      "Doer": "هم"
     },
     {
       "Arabic Verb": "قِيلَ",
@@ -1133,7 +1133,7 @@
       "Tense": "Perfect",
       "Voice": "Passive",
       "English": "To say",
-      "Doer (Pronoun)": "هو"
+      "Doer": "هو"
     },
     {
       "Arabic Verb": "قِيلَتْ",
@@ -1141,7 +1141,7 @@
       "Tense": "Perfect",
       "Voice": "Passive",
       "English": "To say",
-      "Doer (Pronoun)": "هي"
+      "Doer": "هي"
     },
     {
       "Arabic Verb": "قِيلْتُ",
@@ -1149,7 +1149,7 @@
       "Tense": "Perfect",
       "Voice": "Passive",
       "English": "To say",
-      "Doer (Pronoun)": "أنا"
+      "Doer": "أنا"
     },
     {
       "Arabic Verb": "قِيلْنَا",
@@ -1157,7 +1157,7 @@
       "Tense": "Perfect",
       "Voice": "Passive",
       "English": "To say",
-      "Doer (Pronoun)": "نحن"
+      "Doer": "نحن"
     },
     {
       "Arabic Verb": "يَقُولُ",
@@ -1165,7 +1165,7 @@
       "Tense": "Imperfect",
       "Voice": "Active",
       "English": "To say",
-      "Doer (Pronoun)": "هو"
+      "Doer": "هو"
     },
     {
       "Arabic Verb": "تَقُولُ",
@@ -1173,7 +1173,7 @@
       "Tense": "Imperfect",
       "Voice": "Active",
       "English": "To say",
-      "Doer (Pronoun)": "هي"
+      "Doer": "هي"
     },
     {
       "Arabic Verb": "أَقُولُ",
@@ -1181,7 +1181,7 @@
       "Tense": "Imperfect",
       "Voice": "Active",
       "English": "To say",
-      "Doer (Pronoun)": "أنا"
+      "Doer": "أنا"
     },
     {
       "Arabic Verb": "نَقُولُ",
@@ -1189,7 +1189,7 @@
       "Tense": "Imperfect",
       "Voice": "Active",
       "English": "To say",
-      "Doer (Pronoun)": "نحن"
+      "Doer": "نحن"
     },
     {
       "Arabic Verb": "تَقُولُونَ",
@@ -1197,7 +1197,7 @@
       "Tense": "Imperfect",
       "Voice": "Active",
       "English": "To say",
-      "Doer (Pronoun)": "أنتم"
+      "Doer": "أنتم"
     },
     {
       "Arabic Verb": "يَقُولُونَ",
@@ -1205,7 +1205,7 @@
       "Tense": "Imperfect",
       "Voice": "Active",
       "English": "To say",
-      "Doer (Pronoun)": "هم"
+      "Doer": "هم"
     },
     {
       "Arabic Verb": "يُقَالُ",
@@ -1213,7 +1213,7 @@
       "Tense": "Imperfect",
       "Voice": "Passive",
       "English": "To say",
-      "Doer (Pronoun)": "هو"
+      "Doer": "هو"
     },
     {
       "Arabic Verb": "تُقَالُ",
@@ -1221,7 +1221,7 @@
       "Tense": "Imperfect",
       "Voice": "Passive",
       "English": "To say",
-      "Doer (Pronoun)": "هي"
+      "Doer": "هي"
     },
     {
       "Arabic Verb": "تُقُولْتُ",
@@ -1229,7 +1229,7 @@
       "Tense": "Imperfect",
       "Voice": "Passive",
       "English": "To say",
-      "Doer (Pronoun)": "أنا"
+      "Doer": "أنا"
     },
     {
       "Arabic Verb": "نُقَالُ",
@@ -1237,7 +1237,7 @@
       "Tense": "Imperfect",
       "Voice": "Passive",
       "English": "To say",
-      "Doer (Pronoun)": "نحن"
+      "Doer": "نحن"
     },
     {
       "Arabic Verb": "تَقُولُونَ",
@@ -1245,7 +1245,7 @@
       "Tense": "Imperfect",
       "Voice": "Passive",
       "English": "To say",
-      "Doer (Pronoun)": "أنتم"
+      "Doer": "أنتم"
     },
     {
       "Arabic Verb": "يَقُولُونَ",
@@ -1253,7 +1253,7 @@
       "Tense": "Imperfect",
       "Voice": "Passive",
       "English": "To say",
-      "Doer (Pronoun)": "هم"
+      "Doer": "هم"
     },
     {
       "Arabic Verb": "قُلْ",
@@ -1261,7 +1261,7 @@
       "Tense": "Command",
       "Voice": "Active",
       "English": "To say",
-      "Doer (Pronoun)": "أنت"
+      "Doer": "أنت"
     },
     {
       "Arabic Verb": "قُولِي",
@@ -1269,7 +1269,7 @@
       "Tense": "Command",
       "Voice": "Active",
       "English": "To say",
-      "Doer (Pronoun)": "أنتِ"
+      "Doer": "أنتِ"
     },
     {
       "Arabic Verb": "قُولَا",
@@ -1277,7 +1277,7 @@
       "Tense": "Command",
       "Voice": "Active",
       "English": "To say",
-      "Doer (Pronoun)": "أنتما"
+      "Doer": "أنتما"
     },
     {
       "Arabic Verb": "قُولُوا",
@@ -1285,7 +1285,7 @@
       "Tense": "Command",
       "Voice": "Active",
       "English": "To say",
-      "Doer (Pronoun)": "أنتم"
+      "Doer": "أنتم"
     },
     {
       "Arabic Verb": "قُلْنَا",
@@ -1293,7 +1293,7 @@
       "Tense": "Command",
       "Voice": "Active",
       "English": "To say",
-      "Doer (Pronoun)": "نحن"
+      "Doer": "نحن"
     },
     {
       "Arabic Verb": "قُلتُ",
@@ -1301,7 +1301,7 @@
       "Tense": "Perfect",
       "Voice": "Active",
       "English": "To say",
-      "Doer (Pronoun)": "أنا"
+      "Doer": "أنا"
     },
     {
       "Arabic Verb": "قَالَ",
@@ -1309,7 +1309,7 @@
       "Tense": "Perfect",
       "Voice": "Active",
       "English": "To say",
-      "Doer (Pronoun)": "هو"
+      "Doer": "هو"
     },
     {
       "Arabic Verb": "قَالَتْ",
@@ -1317,7 +1317,7 @@
       "Tense": "Perfect",
       "Voice": "Active",
       "English": "To say",
-      "Doer (Pronoun)": "هي"
+      "Doer": "هي"
     },
     {
       "Arabic Verb": "قُلْنَا",
@@ -1325,7 +1325,7 @@
       "Tense": "Perfect",
       "Voice": "Active",
       "English": "To say",
-      "Doer (Pronoun)": "نحن"
+      "Doer": "نحن"
     },
     {
       "Arabic Verb": "قُلْتُمْ",
@@ -1333,7 +1333,7 @@
       "Tense": "Perfect",
       "Voice": "Active",
       "English": "To say",
-      "Doer (Pronoun)": "أنتم"
+      "Doer": "أنتم"
     },
     {
       "Arabic Verb": "قَالُوا",
@@ -1341,7 +1341,7 @@
       "Tense": "Perfect",
       "Voice": "Active",
       "English": "To say",
-      "Doer (Pronoun)": "هم"
+      "Doer": "هم"
     },
     {
       "Arabic Verb": "قِيلَ",
@@ -1349,7 +1349,7 @@
       "Tense": "Perfect",
       "Voice": "Passive",
       "English": "To say",
-      "Doer (Pronoun)": "هو"
+      "Doer": "هو"
     },
     {
       "Arabic Verb": "قِيلَتْ",
@@ -1357,7 +1357,7 @@
       "Tense": "Perfect",
       "Voice": "Passive",
       "English": "To say",
-      "Doer (Pronoun)": "هي"
+      "Doer": "هي"
     },
     {
       "Arabic Verb": "قِيلْتُ",
@@ -1365,7 +1365,7 @@
       "Tense": "Perfect",
       "Voice": "Passive",
       "English": "To say",
-      "Doer (Pronoun)": "أنا"
+      "Doer": "أنا"
     },
     {
       "Arabic Verb": "قِيلْنَا",
@@ -1373,7 +1373,7 @@
       "Tense": "Perfect",
       "Voice": "Passive",
       "English": "To say",
-      "Doer (Pronoun)": "نحن"
+      "Doer": "نحن"
     },
     {
       "Arabic Verb": "يَقُولُ",
@@ -1381,7 +1381,7 @@
       "Tense": "Imperfect",
       "Voice": "Active",
       "English": "To say",
-      "Doer (Pronoun)": "هو"
+      "Doer": "هو"
     },
     {
       "Arabic Verb": "تَقُولُ",
@@ -1389,7 +1389,7 @@
       "Tense": "Imperfect",
       "Voice": "Active",
       "English": "To say",
-      "Doer (Pronoun)": "هي"
+      "Doer": "هي"
     },
     {
       "Arabic Verb": "أَقُولُ",
@@ -1397,7 +1397,7 @@
       "Tense": "Imperfect",
       "Voice": "Active",
       "English": "To say",
-      "Doer (Pronoun)": "أنا"
+      "Doer": "أنا"
     },
     {
       "Arabic Verb": "نَقُولُ",
@@ -1405,7 +1405,7 @@
       "Tense": "Imperfect",
       "Voice": "Active",
       "English": "To say",
-      "Doer (Pronoun)": "نحن"
+      "Doer": "نحن"
     },
     {
       "Arabic Verb": "تَقُولُونَ",
@@ -1413,7 +1413,7 @@
       "Tense": "Imperfect",
       "Voice": "Active",
       "English": "To say",
-      "Doer (Pronoun)": "أنتم"
+      "Doer": "أنتم"
     },
     {
       "Arabic Verb": "يَقُولُونَ",
@@ -1421,7 +1421,7 @@
       "Tense": "Imperfect",
       "Voice": "Active",
       "English": "To say",
-      "Doer (Pronoun)": "هم"
+      "Doer": "هم"
     },
     {
       "Arabic Verb": "يُقَالُ",
@@ -1429,7 +1429,7 @@
       "Tense": "Imperfect",
       "Voice": "Passive",
       "English": "To say",
-      "Doer (Pronoun)": "هو"
+      "Doer": "هو"
     },
     {
       "Arabic Verb": "تُقَالُ",
@@ -1437,7 +1437,7 @@
       "Tense": "Imperfect",
       "Voice": "Passive",
       "English": "To say",
-      "Doer (Pronoun)": "هي"
+      "Doer": "هي"
     },
     {
       "Arabic Verb": "تُقُولْتُ",
@@ -1445,7 +1445,7 @@
       "Tense": "Imperfect",
       "Voice": "Passive",
       "English": "To say",
-      "Doer (Pronoun)": "أنا"
+      "Doer": "أنا"
     },
     {
       "Arabic Verb": "نُقَالُ",
@@ -1453,7 +1453,7 @@
       "Tense": "Imperfect",
       "Voice": "Passive",
       "English": "To say",
-      "Doer (Pronoun)": "نحن"
+      "Doer": "نحن"
     },
     {
       "Arabic Verb": "تَقُولُونَ",
@@ -1461,7 +1461,7 @@
       "Tense": "Imperfect",
       "Voice": "Passive",
       "English": "To say",
-      "Doer (Pronoun)": "أنتم"
+      "Doer": "أنتم"
     },
     {
       "Arabic Verb": "يَقُولُونَ",
@@ -1469,7 +1469,7 @@
       "Tense": "Imperfect",
       "Voice": "Passive",
       "English": "To say",
-      "Doer (Pronoun)": "هم"
+      "Doer": "هم"
     },
     {
       "Arabic Verb": "قُلْ",
@@ -1477,7 +1477,7 @@
       "Tense": "Command",
       "Voice": "Active",
       "English": "To say",
-      "Doer (Pronoun)": "أنت"
+      "Doer": "أنت"
     },
     {
       "Arabic Verb": "قُولِي",
@@ -1485,7 +1485,7 @@
       "Tense": "Command",
       "Voice": "Active",
       "English": "To say",
-      "Doer (Pronoun)": "أنتِ"
+      "Doer": "أنتِ"
     },
     {
       "Arabic Verb": "قُولَا",
@@ -1493,7 +1493,7 @@
       "Tense": "Command",
       "Voice": "Active",
       "English": "To say",
-      "Doer (Pronoun)": "أنتما"
+      "Doer": "أنتما"
     },
     {
       "Arabic Verb": "قُولُوا",
@@ -1501,7 +1501,7 @@
       "Tense": "Command",
       "Voice": "Active",
       "English": "To say",
-      "Doer (Pronoun)": "أنتم"
+      "Doer": "أنتم"
     },
     {
       "Arabic Verb": "قُلْنَا",
@@ -1509,7 +1509,7 @@
       "Tense": "Command",
       "Voice": "Active",
       "English": "To say",
-      "Doer (Pronoun)": "نحن"
+      "Doer": "نحن"
     },
     {
       "Arabic Verb": "قُلتُ",
@@ -1517,7 +1517,7 @@
       "Tense": "Perfect",
       "Voice": "Active",
       "English": "To say",
-      "Doer (Pronoun)": "أنا"
+      "Doer": "أنا"
     },
     {
       "Arabic Verb": "قَالَ",
@@ -1525,7 +1525,7 @@
       "Tense": "Perfect",
       "Voice": "Active",
       "English": "To say",
-      "Doer (Pronoun)": "هو"
+      "Doer": "هو"
     },
     {
       "Arabic Verb": "قَالَتْ",
@@ -1533,7 +1533,7 @@
       "Tense": "Perfect",
       "Voice": "Active",
       "English": "To say",
-      "Doer (Pronoun)": "هي"
+      "Doer": "هي"
     },
     {
       "Arabic Verb": "قُلْنَا",
@@ -1541,7 +1541,7 @@
       "Tense": "Perfect",
       "Voice": "Active",
       "English": "To say",
-      "Doer (Pronoun)": "نحن"
+      "Doer": "نحن"
     },
     {
       "Arabic Verb": "قُلْتُمْ",
@@ -1549,7 +1549,7 @@
       "Tense": "Perfect",
       "Voice": "Active",
       "English": "To say",
-      "Doer (Pronoun)": "أنتم"
+      "Doer": "أنتم"
     },
     {
       "Arabic Verb": "قَالُوا",
@@ -1557,7 +1557,7 @@
       "Tense": "Perfect",
       "Voice": "Active",
       "English": "To say",
-      "Doer (Pronoun)": "هم"
+      "Doer": "هم"
     },
     {
       "Arabic Verb": "قِيلَ",
@@ -1565,7 +1565,7 @@
       "Tense": "Perfect",
       "Voice": "Passive",
       "English": "To say",
-      "Doer (Pronoun)": "هو"
+      "Doer": "هو"
     },
     {
       "Arabic Verb": "قِيلَتْ",
@@ -1573,7 +1573,7 @@
       "Tense": "Perfect",
       "Voice": "Passive",
       "English": "To say",
-      "Doer (Pronoun)": "هي"
+      "Doer": "هي"
     },
     {
       "Arabic Verb": "قِيلْتُ",
@@ -1581,7 +1581,7 @@
       "Tense": "Perfect",
       "Voice": "Passive",
       "English": "To say",
-      "Doer (Pronoun)": "أنا"
+      "Doer": "أنا"
     },
     {
       "Arabic Verb": "قِيلْنَا",
@@ -1589,7 +1589,7 @@
       "Tense": "Perfect",
       "Voice": "Passive",
       "English": "To say",
-      "Doer (Pronoun)": "نحن"
+      "Doer": "نحن"
     },
     {
       "Arabic Verb": "يَقُولُ",
@@ -1597,7 +1597,7 @@
       "Tense": "Imperfect",
       "Voice": "Active",
       "English": "To say",
-      "Doer (Pronoun)": "هو"
+      "Doer": "هو"
     },
     {
       "Arabic Verb": "تَقُولُ",
@@ -1605,7 +1605,7 @@
       "Tense": "Imperfect",
       "Voice": "Active",
       "English": "To say",
-      "Doer (Pronoun)": "هي"
+      "Doer": "هي"
     },
     {
       "Arabic Verb": "أَقُولُ",
@@ -1613,7 +1613,7 @@
       "Tense": "Imperfect",
       "Voice": "Active",
       "English": "To say",
-      "Doer (Pronoun)": "أنا"
+      "Doer": "أنا"
     },
     {
       "Arabic Verb": "نَقُولُ",
@@ -1621,7 +1621,7 @@
       "Tense": "Imperfect",
       "Voice": "Active",
       "English": "To say",
-      "Doer (Pronoun)": "نحن"
+      "Doer": "نحن"
     },
     {
       "Arabic Verb": "تَقُولُونَ",
@@ -1629,7 +1629,7 @@
       "Tense": "Imperfect",
       "Voice": "Active",
       "English": "To say",
-      "Doer (Pronoun)": "أنتم"
+      "Doer": "أنتم"
     },
     {
       "Arabic Verb": "يَقُولُونَ",
@@ -1637,7 +1637,7 @@
       "Tense": "Imperfect",
       "Voice": "Active",
       "English": "To say",
-      "Doer (Pronoun)": "هم"
+      "Doer": "هم"
     },
     {
       "Arabic Verb": "يُقَالُ",
@@ -1645,7 +1645,7 @@
       "Tense": "Imperfect",
       "Voice": "Passive",
       "English": "To say",
-      "Doer (Pronoun)": "هو"
+      "Doer": "هو"
     },
     {
       "Arabic Verb": "تُقَالُ",
@@ -1653,7 +1653,7 @@
       "Tense": "Imperfect",
       "Voice": "Passive",
       "English": "To say",
-      "Doer (Pronoun)": "هي"
+      "Doer": "هي"
     },
     {
       "Arabic Verb": "تُقُولْتُ",
@@ -1661,7 +1661,7 @@
       "Tense": "Imperfect",
       "Voice": "Passive",
       "English": "To say",
-      "Doer (Pronoun)": "أنا"
+      "Doer": "أنا"
     },
     {
       "Arabic Verb": "نُقَالُ",
@@ -1669,7 +1669,7 @@
       "Tense": "Imperfect",
       "Voice": "Passive",
       "English": "To say",
-      "Doer (Pronoun)": "نحن"
+      "Doer": "نحن"
     },
     {
       "Arabic Verb": "تَقُولُونَ",
@@ -1677,7 +1677,7 @@
       "Tense": "Imperfect",
       "Voice": "Passive",
       "English": "To say",
-      "Doer (Pronoun)": "أنتم"
+      "Doer": "أنتم"
     },
     {
       "Arabic Verb": "يَقُولُونَ",
@@ -1685,7 +1685,7 @@
       "Tense": "Imperfect",
       "Voice": "Passive",
       "English": "To say",
-      "Doer (Pronoun)": "هم"
+      "Doer": "هم"
     },
     {
       "Arabic Verb": "قُلْ",
@@ -1693,7 +1693,7 @@
       "Tense": "Command",
       "Voice": "Active",
       "English": "To say",
-      "Doer (Pronoun)": "أنت"
+      "Doer": "أنت"
     },
     {
       "Arabic Verb": "قُولِي",
@@ -1701,7 +1701,7 @@
       "Tense": "Command",
       "Voice": "Active",
       "English": "To say",
-      "Doer (Pronoun)": "أنتِ"
+      "Doer": "أنتِ"
     },
     {
       "Arabic Verb": "قُولَا",
@@ -1709,7 +1709,7 @@
       "Tense": "Command",
       "Voice": "Active",
       "English": "To say",
-      "Doer (Pronoun)": "أنتما"
+      "Doer": "أنتما"
     },
     {
       "Arabic Verb": "قُولُوا",
@@ -1717,7 +1717,7 @@
       "Tense": "Command",
       "Voice": "Active",
       "English": "To say",
-      "Doer (Pronoun)": "أنتم"
+      "Doer": "أنتم"
     },
     {
       "Arabic Verb": "قُلْنَا",
@@ -1725,7 +1725,7 @@
       "Tense": "Command",
       "Voice": "Active",
       "English": "To say",
-      "Doer (Pronoun)": "نحن"
+      "Doer": "نحن"
     },
     {
       "Arabic Verb": "قُلتُ",
@@ -1733,7 +1733,7 @@
       "Tense": "Perfect",
       "Voice": "Active",
       "English": "To say",
-      "Doer (Pronoun)": "أنا"
+      "Doer": "أنا"
     },
     {
       "Arabic Verb": "قَالَ",
@@ -1741,7 +1741,7 @@
       "Tense": "Perfect",
       "Voice": "Active",
       "English": "To say",
-      "Doer (Pronoun)": "هو"
+      "Doer": "هو"
     },
     {
       "Arabic Verb": "قَالَتْ",
@@ -1749,7 +1749,7 @@
       "Tense": "Perfect",
       "Voice": "Active",
       "English": "To say",
-      "Doer (Pronoun)": "هي"
+      "Doer": "هي"
     },
     {
       "Arabic Verb": "قُلْنَا",
@@ -1757,7 +1757,7 @@
       "Tense": "Perfect",
       "Voice": "Active",
       "English": "To say",
-      "Doer (Pronoun)": "نحن"
+      "Doer": "نحن"
     },
     {
       "Arabic Verb": "قُلْتُمْ",
@@ -1765,7 +1765,7 @@
       "Tense": "Perfect",
       "Voice": "Active",
       "English": "To say",
-      "Doer (Pronoun)": "أنتم"
+      "Doer": "أنتم"
     },
     {
       "Arabic Verb": "قَالُوا",
@@ -1773,7 +1773,7 @@
       "Tense": "Perfect",
       "Voice": "Active",
       "English": "To say",
-      "Doer (Pronoun)": "هم"
+      "Doer": "هم"
     },
     {
       "Arabic Verb": "قِيلَ",
@@ -1781,7 +1781,7 @@
       "Tense": "Perfect",
       "Voice": "Passive",
       "English": "To say",
-      "Doer (Pronoun)": "هو"
+      "Doer": "هو"
     },
     {
       "Arabic Verb": "قِيلَتْ",
@@ -1789,7 +1789,7 @@
       "Tense": "Perfect",
       "Voice": "Passive",
       "English": "To say",
-      "Doer (Pronoun)": "هي"
+      "Doer": "هي"
     },
     {
       "Arabic Verb": "قِيلْتُ",
@@ -1797,7 +1797,7 @@
       "Tense": "Perfect",
       "Voice": "Passive",
       "English": "To say",
-      "Doer (Pronoun)": "أنا"
+      "Doer": "أنا"
     },
     {
       "Arabic Verb": "قِيلْنَا",
@@ -1805,7 +1805,7 @@
       "Tense": "Perfect",
       "Voice": "Passive",
       "English": "To say",
-      "Doer (Pronoun)": "نحن"
+      "Doer": "نحن"
     },
     {
       "Arabic Verb": "يَقُولُ",
@@ -1813,7 +1813,7 @@
       "Tense": "Imperfect",
       "Voice": "Active",
       "English": "To say",
-      "Doer (Pronoun)": "هو"
+      "Doer": "هو"
     },
     {
       "Arabic Verb": "تَقُولُ",
@@ -1821,7 +1821,7 @@
       "Tense": "Imperfect",
       "Voice": "Active",
       "English": "To say",
-      "Doer (Pronoun)": "هي"
+      "Doer": "هي"
     },
     {
       "Arabic Verb": "أَقُولُ",
@@ -1829,7 +1829,7 @@
       "Tense": "Imperfect",
       "Voice": "Active",
       "English": "To say",
-      "Doer (Pronoun)": "أنا"
+      "Doer": "أنا"
     },
     {
       "Arabic Verb": "نَقُولُ",
@@ -1837,7 +1837,7 @@
       "Tense": "Imperfect",
       "Voice": "Active",
       "English": "To say",
-      "Doer (Pronoun)": "نحن"
+      "Doer": "نحن"
     },
     {
       "Arabic Verb": "تَقُولُونَ",
@@ -1845,7 +1845,7 @@
       "Tense": "Imperfect",
       "Voice": "Active",
       "English": "To say",
-      "Doer (Pronoun)": "أنتم"
+      "Doer": "أنتم"
     },
     {
       "Arabic Verb": "يَقُولُونَ",
@@ -1853,7 +1853,7 @@
       "Tense": "Imperfect",
       "Voice": "Active",
       "English": "To say",
-      "Doer (Pronoun)": "هم"
+      "Doer": "هم"
     },
     {
       "Arabic Verb": "يُقَالُ",
@@ -1861,7 +1861,7 @@
       "Tense": "Imperfect",
       "Voice": "Passive",
       "English": "To say",
-      "Doer (Pronoun)": "هو"
+      "Doer": "هو"
     },
     {
       "Arabic Verb": "تُقَالُ",
@@ -1869,7 +1869,7 @@
       "Tense": "Imperfect",
       "Voice": "Passive",
       "English": "To say",
-      "Doer (Pronoun)": "هي"
+      "Doer": "هي"
     },
     {
       "Arabic Verb": "تُقُولْتُ",
@@ -1877,7 +1877,7 @@
       "Tense": "Imperfect",
       "Voice": "Passive",
       "English": "To say",
-      "Doer (Pronoun)": "أنا"
+      "Doer": "أنا"
     },
     {
       "Arabic Verb": "نُقَالُ",
@@ -1885,7 +1885,7 @@
       "Tense": "Imperfect",
       "Voice": "Passive",
       "English": "To say",
-      "Doer (Pronoun)": "نحن"
+      "Doer": "نحن"
     },
     {
       "Arabic Verb": "تَقُولُونَ",
@@ -1893,7 +1893,7 @@
       "Tense": "Imperfect",
       "Voice": "Passive",
       "English": "To say",
-      "Doer (Pronoun)": "أنتم"
+      "Doer": "أنتم"
     },
     {
       "Arabic Verb": "يَقُولُونَ",
@@ -1901,7 +1901,7 @@
       "Tense": "Imperfect",
       "Voice": "Passive",
       "English": "To say",
-      "Doer (Pronoun)": "هم"
+      "Doer": "هم"
     },
     {
       "Arabic Verb": "قُلْ",
@@ -1909,7 +1909,7 @@
       "Tense": "Command",
       "Voice": "Active",
       "English": "To say",
-      "Doer (Pronoun)": "أنت"
+      "Doer": "أنت"
     },
     {
       "Arabic Verb": "قُولِي",
@@ -1917,7 +1917,7 @@
       "Tense": "Command",
       "Voice": "Active",
       "English": "To say",
-      "Doer (Pronoun)": "أنتِ"
+      "Doer": "أنتِ"
     },
     {
       "Arabic Verb": "قُولَا",
@@ -1925,7 +1925,7 @@
       "Tense": "Command",
       "Voice": "Active",
       "English": "To say",
-      "Doer (Pronoun)": "أنتما"
+      "Doer": "أنتما"
     },
     {
       "Arabic Verb": "قُولُوا",
@@ -1933,7 +1933,7 @@
       "Tense": "Command",
       "Voice": "Active",
       "English": "To say",
-      "Doer (Pronoun)": "أنتم"
+      "Doer": "أنتم"
     },
     {
       "Arabic Verb": "قُلْنَا",
@@ -1941,7 +1941,7 @@
       "Tense": "Command",
       "Voice": "Active",
       "English": "To say",
-      "Doer (Pronoun)": "نحن"
+      "Doer": "نحن"
     },
     {
       "Arabic Verb": "قُلتُ",
@@ -1949,7 +1949,7 @@
       "Tense": "Perfect",
       "Voice": "Active",
       "English": "To say",
-      "Doer (Pronoun)": "أنا"
+      "Doer": "أنا"
     },
     {
       "Arabic Verb": "قَالَ",
@@ -1957,7 +1957,7 @@
       "Tense": "Perfect",
       "Voice": "Active",
       "English": "To say",
-      "Doer (Pronoun)": "هو"
+      "Doer": "هو"
     },
     {
       "Arabic Verb": "قَالَتْ",
@@ -1965,7 +1965,7 @@
       "Tense": "Perfect",
       "Voice": "Active",
       "English": "To say",
-      "Doer (Pronoun)": "هي"
+      "Doer": "هي"
     },
     {
       "Arabic Verb": "قُلْنَا",
@@ -1973,7 +1973,7 @@
       "Tense": "Perfect",
       "Voice": "Active",
       "English": "To say",
-      "Doer (Pronoun)": "نحن"
+      "Doer": "نحن"
     },
     {
       "Arabic Verb": "قُلْتُمْ",
@@ -1981,7 +1981,7 @@
       "Tense": "Perfect",
       "Voice": "Active",
       "English": "To say",
-      "Doer (Pronoun)": "أنتم"
+      "Doer": "أنتم"
     },
     {
       "Arabic Verb": "قَالُوا",
@@ -1989,7 +1989,7 @@
       "Tense": "Perfect",
       "Voice": "Active",
       "English": "To say",
-      "Doer (Pronoun)": "هم"
+      "Doer": "هم"
     },
     {
       "Arabic Verb": "قِيلَ",
@@ -1997,7 +1997,7 @@
       "Tense": "Perfect",
       "Voice": "Passive",
       "English": "To say",
-      "Doer (Pronoun)": "هو"
+      "Doer": "هو"
     },
     {
       "Arabic Verb": "قِيلَتْ",
@@ -2005,7 +2005,7 @@
       "Tense": "Perfect",
       "Voice": "Passive",
       "English": "To say",
-      "Doer (Pronoun)": "هي"
+      "Doer": "هي"
     },
     {
       "Arabic Verb": "قِيلْتُ",
@@ -2013,7 +2013,7 @@
       "Tense": "Perfect",
       "Voice": "Passive",
       "English": "To say",
-      "Doer (Pronoun)": "أنا"
+      "Doer": "أنا"
     },
     {
       "Arabic Verb": "قِيلْنَا",
@@ -2021,7 +2021,7 @@
       "Tense": "Perfect",
       "Voice": "Passive",
       "English": "To say",
-      "Doer (Pronoun)": "نحن"
+      "Doer": "نحن"
     },
     {
       "Arabic Verb": "يَقُولُ",
@@ -2029,7 +2029,7 @@
       "Tense": "Imperfect",
       "Voice": "Active",
       "English": "To say",
-      "Doer (Pronoun)": "هو"
+      "Doer": "هو"
     },
     {
       "Arabic Verb": "تَقُولُ",
@@ -2037,7 +2037,7 @@
       "Tense": "Imperfect",
       "Voice": "Active",
       "English": "To say",
-      "Doer (Pronoun)": "هي"
+      "Doer": "هي"
     },
     {
       "Arabic Verb": "أَقُولُ",
@@ -2045,7 +2045,7 @@
       "Tense": "Imperfect",
       "Voice": "Active",
       "English": "To say",
-      "Doer (Pronoun)": "أنا"
+      "Doer": "أنا"
     },
     {
       "Arabic Verb": "نَقُولُ",
@@ -2053,7 +2053,7 @@
       "Tense": "Imperfect",
       "Voice": "Active",
       "English": "To say",
-      "Doer (Pronoun)": "نحن"
+      "Doer": "نحن"
     },
     {
       "Arabic Verb": "تَقُولُونَ",
@@ -2061,7 +2061,7 @@
       "Tense": "Imperfect",
       "Voice": "Active",
       "English": "To say",
-      "Doer (Pronoun)": "أنتم"
+      "Doer": "أنتم"
     },
     {
       "Arabic Verb": "يَقُولُونَ",
@@ -2069,7 +2069,7 @@
       "Tense": "Imperfect",
       "Voice": "Active",
       "English": "To say",
-      "Doer (Pronoun)": "هم"
+      "Doer": "هم"
     },
     {
       "Arabic Verb": "يُقَالُ",
@@ -2077,7 +2077,7 @@
       "Tense": "Imperfect",
       "Voice": "Passive",
       "English": "To say",
-      "Doer (Pronoun)": "هو"
+      "Doer": "هو"
     },
     {
       "Arabic Verb": "تُقَالُ",
@@ -2085,7 +2085,7 @@
       "Tense": "Imperfect",
       "Voice": "Passive",
       "English": "To say",
-      "Doer (Pronoun)": "هي"
+      "Doer": "هي"
     },
     {
       "Arabic Verb": "تُقُولْتُ",
@@ -2093,7 +2093,7 @@
       "Tense": "Imperfect",
       "Voice": "Passive",
       "English": "To say",
-      "Doer (Pronoun)": "أنا"
+      "Doer": "أنا"
     },
     {
       "Arabic Verb": "نُقَالُ",
@@ -2101,7 +2101,7 @@
       "Tense": "Imperfect",
       "Voice": "Passive",
       "English": "To say",
-      "Doer (Pronoun)": "نحن"
+      "Doer": "نحن"
     },
     {
       "Arabic Verb": "تَقُولُونَ",
@@ -2109,7 +2109,7 @@
       "Tense": "Imperfect",
       "Voice": "Passive",
       "English": "To say",
-      "Doer (Pronoun)": "أنتم"
+      "Doer": "أنتم"
     },
     {
       "Arabic Verb": "يَقُولُونَ",
@@ -2117,7 +2117,7 @@
       "Tense": "Imperfect",
       "Voice": "Passive",
       "English": "To say",
-      "Doer (Pronoun)": "هم"
+      "Doer": "هم"
     },
     {
       "Arabic Verb": "قُلْ",
@@ -2125,7 +2125,7 @@
       "Tense": "Command",
       "Voice": "Active",
       "English": "To say",
-      "Doer (Pronoun)": "أنت"
+      "Doer": "أنت"
     },
     {
       "Arabic Verb": "قُولِي",
@@ -2133,7 +2133,7 @@
       "Tense": "Command",
       "Voice": "Active",
       "English": "To say",
-      "Doer (Pronoun)": "أنتِ"
+      "Doer": "أنتِ"
     },
     {
       "Arabic Verb": "قُولَا",
@@ -2141,7 +2141,7 @@
       "Tense": "Command",
       "Voice": "Active",
       "English": "To say",
-      "Doer (Pronoun)": "أنتما"
+      "Doer": "أنتما"
     },
     {
       "Arabic Verb": "قُولُوا",
@@ -2149,7 +2149,7 @@
       "Tense": "Command",
       "Voice": "Active",
       "English": "To say",
-      "Doer (Pronoun)": "أنتم"
+      "Doer": "أنتم"
     },
     {
       "Arabic Verb": "قُلْنَا",
@@ -2157,6 +2157,6 @@
       "Tense": "Command",
       "Voice": "Active",
       "English": "To say",
-      "Doer (Pronoun)": "نحن"
+      "Doer": "نحن"
     }
   ]

@@ -37,6 +37,7 @@ export const WORDS_DATA = [
     base: "ال",
     // rootLetters: ["ا", "ل"],
     isOnCanvas: false,
+    isDefinite: true,
     english: ["The"],
     position: {
       x: 0,

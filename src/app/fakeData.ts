@@ -46,6 +46,28 @@ export const WORDS_DATA = [
   },
   {
     ...nounSpreadObj,
+    base: "اسْمٌ",
+    isOnCanvas: false,
+    english: ["Name"],
+    position: {
+      x: 0,
+      y: 0
+    },
+    id: "اسْمٌ"
+  },
+  {
+    ...nounSpreadObj,
+    base: "اللهُ",
+    isOnCanvas: false,
+    english: ["Allah"],
+    position: {
+      x: 0,
+      y: 0
+    },
+    id: "اللهُ"
+  },
+  {
+    ...nounSpreadObj,
     base: "كتابٌ",
     isOnCanvas: false,
     english: ["Book"],

@@ -71,7 +71,13 @@ export function getNewWord(
     draggedWord.category === Categories.NOUN &&
     droppedWord.category === Categories.PRONOUN
   ) {
-    return draggedWord.base + droppedWord.forms?.genitive;
+    return (
+      draggedWord.base.replace(/^ال/, "")
+        .replace(/ٌ$/, "ُ")
+        .replace(/ً$/, "َ")
+        .replace(/ٍ$/, "ِ") 
+      + droppedWord.forms?.genitive
+    ); // Updated NOUN + PRONOUN to be/follow possessive construction
   }
 
   if (

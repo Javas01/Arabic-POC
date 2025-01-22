@@ -10,6 +10,7 @@ export default function RootLayout({
       <head>
         {/* <script src="https://unpkg.com/react-scan/dist/auto.global.js"></script> */}
         <title>ARABIC-SCRATCH POC</title>
+        <link rel="icon" type="image/svg+xml" href="/logo.svg" />
       </head>
       <body>{children}</body>
     </html>

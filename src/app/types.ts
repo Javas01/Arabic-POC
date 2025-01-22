@@ -26,7 +26,7 @@ export type WordNode = {
   };
 };
 
-enum CategoryToColor {
+export enum CategoryToColor {
   PRONOUN = "lightgreen",
   NOUN = "green",
   PARTICLE = "blue",

@@ -24,12 +24,12 @@ const particleSpreadObj = {
   hide: false,
   parts: []
 };
-const verbSpreadObj = {
-  color: Category.VERB.color,
-  category: Categories.VERB,
-  hide: false,
-  parts: []
-};
+// const verbSpreadObj = {
+//   color: Category.VERB.color,
+//   category: Categories.VERB,
+//   hide: false,
+//   parts: []
+// };
 
 export const WORDS_DATA = [
   {
@@ -507,62 +507,62 @@ export const WORDS_DATA = [
       y: 0
     },
     id: "مَعَ"
-  },
-  {
-    ...verbSpreadObj,
-    base: "ذهب",
-    isOnCanvas: false,
-    english: ["He went"],
-    position: {
-      x: 0,
-      y: 0
-    },
-    id: "ذهب"
-  },
-  {
-    ...verbSpreadObj,
-    base: "قرأ",
-    isOnCanvas: false,
-    english: ["He read"],
-    position: {
-      x: 0,
-      y: 0
-    },
-    id: "قرأ"
-  },
-  {
-    ...verbSpreadObj,
-    base: "قَوَلَ",
-    isOnCanvas: false,
-    english: ["He said"],
-    position: {
-      x: 0,
-      y: 0
-    },
-    id: "قَوَلَ"
-  },
-  {
-    ...verbSpreadObj,
-    base: "عَوَذَ",
-    isOnCanvas: false,
-    english: ["He sought refuge"],
-    position: {
-      x: 0,
-      y: 0
-    },
-    id: "عَوَذَ"
-  },
-  {
-    ...verbSpreadObj,
-    base: "وَسْوَسَ",
-    isOnCanvas: false,
-    english: ["He whispered"],
-    position: {
-      x: 0,
-      y: 0
-    },
-    id: "وَسْوَسَ"
   }
+  // {
+  //   ...verbSpreadObj,
+  //   base: "ذهب",
+  //   isOnCanvas: false,
+  //   english: ["He went"],
+  //   position: {
+  //     x: 0,
+  //     y: 0
+  //   },
+  //   id: "ذهب"
+  // },
+  // {
+  //   ...verbSpreadObj,
+  //   base: "قرأ",
+  //   isOnCanvas: false,
+  //   english: ["He read"],
+  //   position: {
+  //     x: 0,
+  //     y: 0
+  //   },
+  //   id: "قرأ"
+  // },
+  // {
+  //   ...verbSpreadObj,
+  //   base: "قَوَلَ",
+  //   isOnCanvas: false,
+  //   english: ["He said"],
+  //   position: {
+  //     x: 0,
+  //     y: 0
+  //   },
+  //   id: "قَوَلَ"
+  // },
+  // {
+  //   ...verbSpreadObj,
+  //   base: "عَوَذَ",
+  //   isOnCanvas: false,
+  //   english: ["He sought refuge"],
+  //   position: {
+  //     x: 0,
+  //     y: 0
+  //   },
+  //   id: "عَوَذَ"
+  // },
+  // {
+  //   ...verbSpreadObj,
+  //   base: "وَسْوَسَ",
+  //   isOnCanvas: false,
+  //   english: ["He whispered"],
+  //   position: {
+  //     x: 0,
+  //     y: 0
+  //   },
+  //   id: "وَسْوَسَ"
+  // }
 ];
 
 // ASCII for the Arabic vowels for easy access

@@ -24,6 +24,7 @@ export function mergeWords(
       id: (customCombinedWord ?? newWord) + createId(),
       english: [""], // TODO: Add a way to add the english word
       isOnCanvas: true,
+      isDefinite: draggedWord.isDefinite || droppedWord.isDefinite, // Might not work for all cases
       color: Category.NOUN.color, // TODO: Add a way to add the color
       category: Categories.NOUN, // TODO: Add a way to add the category
       hide: false,
@@ -73,11 +74,11 @@ export function getNewWord(
     droppedWord.category === Categories.PRONOUN
   ) {
     return (
-      draggedWord.base.replace(/^ال/, "")
+      draggedWord.base
+        .replace(/^ال/, "")
         .replace(/ٌ$/, "ُ")
         .replace(/ً$/, "َ")
-        .replace(/ٍ$/, "ِ") 
-      + droppedWord.forms?.genitive
+        .replace(/ٍ$/, "ِ") + droppedWord.forms?.genitive
     ); // Updated NOUN + PRONOUN to be/follow possessive construction
   }
 
@@ -181,60 +182,60 @@ export function getNewWord(
             .replace(/ِ$/, "") +
           "ِ"
         );
-        case "possessive_possessive":
-          if (droppedWord.parts.length > 1 && droppedWord.parts[1].forms) {
-            return (
-              draggedWord.base
-                .replace(/^ال/, "")
-                .replace(/ٌ$/, "ُ")
-                .replace(/ً$/, "َ")
-                .replace(/ٍ$/, "ِ") +
-              " " +
-              droppedWord.parts[0].base
-                .replace(/^ال/, "")
-                .replace(/ٌ$/, "")
-                .replace(/ً$/, "")
-                .replace(/ٍ$/, "")
-                .replace(/ُ$/, "")
-                .replace(/َ$/, "")
-                .replace(/ِ$/, "") +
-              "ِ" +
-              droppedWord.parts[1].forms?.genitive
-            );
-          } else if (droppedWord.parts.length > 1) {
-            return (
-              draggedWord.base
-                .replace(/^ال/, "")
-                .replace(/ٌ$/, "ُ")
-                .replace(/ً$/, "َ")
-                .replace(/ٍ$/, "ِ") +
-              " " +
-              droppedWord.parts[0].base
-                .replace(/^ال/, "")
-                .replace(/ٌ$/, "")
-                .replace(/ً$/, "")
-                .replace(/ٍ$/, "")
-                .replace(/ُ$/, "")
-                .replace(/َ$/, "")
-                .replace(/ِ$/, "") +
-              "ِ" +
-              " " +
-              "ال" +
-              droppedWord.parts[1].base
+      case "possessive_possessive":
+        if (droppedWord.parts.length > 1 && droppedWord.parts[1].forms) {
+          return (
+            draggedWord.base
               .replace(/^ال/, "")
-                .replace(/ٌ$/, "")
-                .replace(/ً$/, "")
-                .replace(/ٍ$/, "")
-                .replace(/ُ$/, "")
-                .replace(/َ$/, "")
-                .replace(/ِ$/, "") +
-              "ِ"
-            );
-          } else {
-            console.error("droppedWord.parts does not have enough elements");
-              return "";
-          }
-        case "sentence":
+              .replace(/ٌ$/, "ُ")
+              .replace(/ً$/, "َ")
+              .replace(/ٍ$/, "ِ") +
+            " " +
+            droppedWord.parts[0].base
+              .replace(/^ال/, "")
+              .replace(/ٌ$/, "")
+              .replace(/ً$/, "")
+              .replace(/ٍ$/, "")
+              .replace(/ُ$/, "")
+              .replace(/َ$/, "")
+              .replace(/ِ$/, "") +
+            "ِ" +
+            droppedWord.parts[1].forms?.genitive
+          );
+        } else if (droppedWord.parts.length > 1) {
+          return (
+            draggedWord.base
+              .replace(/^ال/, "")
+              .replace(/ٌ$/, "ُ")
+              .replace(/ً$/, "َ")
+              .replace(/ٍ$/, "ِ") +
+            " " +
+            droppedWord.parts[0].base
+              .replace(/^ال/, "")
+              .replace(/ٌ$/, "")
+              .replace(/ً$/, "")
+              .replace(/ٍ$/, "")
+              .replace(/ُ$/, "")
+              .replace(/َ$/, "")
+              .replace(/ِ$/, "") +
+            "ِ" +
+            " " +
+            "ال" +
+            droppedWord.parts[1].base
+              .replace(/^ال/, "")
+              .replace(/ٌ$/, "")
+              .replace(/ً$/, "")
+              .replace(/ٍ$/, "")
+              .replace(/ُ$/, "")
+              .replace(/َ$/, "")
+              .replace(/ِ$/, "") +
+            "ِ"
+          );
+        } else {
+          console.error("droppedWord.parts does not have enough elements");
+          return "";
+        }
+      case "sentence":
         return (
           "ال" +
           draggedWord.base.replace(/^ال/, "") +

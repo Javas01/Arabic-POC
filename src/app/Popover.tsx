@@ -20,7 +20,10 @@ const Popover = ({ position, words, onChoice }: PopoverProps) => {
       }}
     >
       <Button onClick={onChoice} className="text-2xl" size="lg" variant="ghost">
-        {getNewWord(words[0], words[1], "posessive")}
+        {getNewWord(words[0], words[1], "possessive")}
+      </Button>
+      <Button onClick={onChoice} className="text-2xl" size="lg" variant="ghost">
+        {getNewWord(words[0], words[1], "possessive_possessive")}
       </Button>
       <Button onClick={onChoice} className="text-2xl" size="lg" variant="ghost">
         {getNewWord(words[0], words[1], "adjective_indefinite")}

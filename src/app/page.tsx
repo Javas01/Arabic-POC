@@ -3,7 +3,14 @@
 import React, { useRef } from "react";
 import { Toaster } from "@/components/ui/toaster";
 import { useToast } from "@/hooks/use-toast";
-import { DndContext, DragEndEvent, DragOverlay } from "@dnd-kit/core";
+import {
+  DndContext,
+  DragEndEvent,
+  DragOverlay,
+  PointerSensor,
+  useSensor,
+  useSensors
+} from "@dnd-kit/core";
 import { useState } from "react";
 import { Categories, WordNode } from "./types";
 import { canMerge } from "./canMerge";
@@ -15,6 +22,7 @@ import PartsTooltip from "./PartsTooltip";
 import dynamic from "next/dynamic";
 import EnglishTooltip from "./EnglishTooltip";
 import { createId } from "./createId";
+import { useStore } from "./store";
 
 const WordBlock = dynamic(() => import("./WordBlock"), {
   ssr: false
@@ -30,16 +38,18 @@ type Popover = {
 
 export default function Home() {
   const { toast } = useToast();
-  const [canvasWords, setCanvasWords] = useState<WordNode[]>([]);
+  const canvasWords = useStore((state) => state.canvasWords);
+  const setCanvasWords = useStore((state) => state.setCanvasWords);
   const [popover, setPopover] = useState<Popover | null>(null);
   const scrollRef = useRef<HTMLElement>(null);
 
   function handleDragEnd(event: DragEndEvent) {
+    if ((event.activatorEvent as MouseEvent).shiftKey) return;
     const { over, active, delta } = event;
     let draggedWord = active.data.current as WordNode;
     const droppedWord = over?.data.current as WordNode;
 
-    if (over && (over.id as string).split("-")[0] === "wordtab") {
+    if (event.collisions?.find((collision) => collision.id === "wordtab")) {
       // Remove the dragged word from the canvas
       setCanvasWords((oldWords) =>
         oldWords.filter((word) => word.id !== draggedWord.id)
@@ -126,7 +136,7 @@ export default function Home() {
         droppedWord,
         canvasWords
       );
-      setCanvasWords(newWords);
+      setCanvasWords(() => newWords);
       setactiveWord(null);
     }
   }
@@ -140,10 +150,19 @@ export default function Home() {
       canvasWords,
       (event.target as HTMLElement).innerText
     );
-    setCanvasWords(newWords);
+    setCanvasWords(() => newWords);
   }
 
   const [activeWord, setactiveWord] = useState<WordNode | null>(null);
+
+  const pointerSensor = useSensor(PointerSensor, {
+    activationConstraint: {
+      distance: 10 // Drag will start after 10px movement
+    }
+  });
+
+  // Combine sensors if needed
+  const sensors = useSensors(pointerSensor);
 
   return (
     <TooltipProvider delayDuration={0}>
@@ -159,6 +178,7 @@ export default function Home() {
           />
         )}
         <DndContext
+          sensors={sensors}
           onDragStart={({ active, activatorEvent }) => {
             if ((activatorEvent as MouseEvent).screenX < 250)
               setactiveWord({

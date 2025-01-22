@@ -15,7 +15,7 @@ const WordCategoryTab = React.memo(
     children: React.ReactNode;
   }) => {
     const { over, setNodeRef } = useDroppable({
-      id: `wordtab-${category}`
+      id: `wordtab`
     });
 
     return (

@@ -3,6 +3,8 @@ import React from "react";
 import { CSS } from "@dnd-kit/utilities";
 import { useDraggable, useDroppable } from "@dnd-kit/core";
 import { WordNode } from "./types";
+import { Input } from "@/components/ui/input";
+import { useStore } from "./store";
 
 type WordBlockProps = {
   children?: React.ReactNode;
@@ -31,7 +33,9 @@ const WordBlock = (props: WordBlockProps) => {
     data: props.word
   });
 
-  const canConnect = over && over.id === id && id !== active?.id;
+  const canConnect =
+    over && over.id === id && id !== active?.id && props.word.isOnCanvas;
+
   const style = {
     transform: CSS.Translate.toString(transform),
     position: "absolute" as const,
@@ -39,6 +43,10 @@ const WordBlock = (props: WordBlockProps) => {
     top: `${position.y}px`,
     zIndex: 999
   };
+
+  const editCanvasWord = useStore((state) => state.editCanvasWord);
+  const isEditing = useStore((state) => state.editing === id);
+  const setEditing = useStore((state) => state.setEditing);
 
   return (
     <div
@@ -68,8 +76,39 @@ const WordBlock = (props: WordBlockProps) => {
           textAlign: "center",
           minWidth: "150px"
         }}
+        onClick={(e) => {
+          if (e.shiftKey) {
+            setEditing(props.id as string);
+            return;
+          }
+        }}
       >
-        {props.children}
+        {isEditing ? (
+          <Input
+            autoFocus
+            style={{
+              fontSize: "2.5rem",
+              textAlign: "center",
+              border: "none"
+            }}
+            onKeyDown={(e) => {
+              if (e.key === "Enter" || e.key === "Escape") {
+                setEditing("");
+              }
+            }}
+            size={10}
+            dir="rtl"
+            value={props.word.base}
+            onChange={(e) => {
+              const input = e.target;
+              // Allow only Arabic characters
+              input.value = input.value.replace(/[^\u0600-\u06FF\s]/g, "");
+              editCanvasWord(props.word.id, input.value);
+            }}
+          />
+        ) : (
+          props.children
+        )}
       </div>
     </div>
   );

@@ -7,7 +7,6 @@ import {
 import React from "react";
 import WordBlock from "./WordBlock";
 import { WordNode } from "./types";
-import { createId } from "./createId";
 
 type PartsTooltipProps = {
   word: WordNode;
@@ -17,11 +16,7 @@ type PartsTooltipProps = {
 export const PartsTooltip = ({ word, onRightClick }: PartsTooltipProps) => {
   return (
     <Tooltip key={word.id}>
-      <WordBlock
-        id={word.base + createId()}
-        word={word}
-        onRightClick={onRightClick}
-      >
+      <WordBlock id={word.id} word={word} onRightClick={onRightClick}>
         <TooltipTrigger>{word.base}</TooltipTrigger>
       </WordBlock>
       <TooltipContent side="top" align="center" sideOffset={30}>
